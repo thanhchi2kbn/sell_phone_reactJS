@@ -2,16 +2,16 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProductPage from './Page/ProductPage/Index';
+import AdminLayout from './Layout/AdminLayout';
 
 function App() {
  
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <ProductPage/>
-      </BrowserRouter>
-
+        <AdminLayout>
+          {/* <ProductPage/> */}
+        </AdminLayout>
     </div>
   );
 }
