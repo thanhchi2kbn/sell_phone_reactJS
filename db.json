@@ -1,0 +1,60 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "name": "iPhone 12",
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "12 MP",
+        "display": "Super Retina XDR OLED, 6.1 inches",
+        "memory": "64GB",
+        "color": "Green"
+      },
+      "price": 15000000,
+      "image": "https://cdn.hoanghamobile.com/i/preview/Uploads/2020/11/06/apple-iphone-12-mini-5.png"
+    },
+    {
+      "id": 2,
+      "name": "Galaxy S21",
+      "details": {
+        "brand": "Samsung",
+        "operatingSystem": "Android",
+        "camera": "12 MP",
+        "display": "Dynamic AMOLED 2X, 6.2 inches",
+        "memory": "128GB",
+        "color": "Blue"
+      },
+      "price": 12000000,
+      "image": "https://truesmart.com.vn/wp-content/uploads/samsung-galaxy-s21-ultra-bac-600x600-1-200x200-1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pixel 5",
+      "details": {
+        "brand": "Google",
+        "operatingSystem": "Android",
+        "camera": "12.2 MP",
+        "display": "OLED, 6.0 inches",
+        "memory": "128GB",
+        "color": "Black"
+      },
+      "price": 9000000,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/198422/google-pixel-5-600jpg-600x600.jpg"
+    },
+    {
+      "name": "Hồ Chí Thành 5",
+      "image": "https://doingoai.bacgiang.gov.vn/sites/default/files/dang-cap-nhat_4_3.png",
+      "price": 2200000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "IOS",
+        "camera": "12 px",
+        "display": "OLED, 6.0 inches",
+        "memory": "128 GB",
+        "color": "Black"
+      },
+      "id": 4
+    }
+  ]
+}
