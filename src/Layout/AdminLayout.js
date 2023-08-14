@@ -6,13 +6,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { MENUS } from '../Routes/constants';
 import { Link, Outlet } from 'react-router-dom';
 
@@ -48,7 +45,7 @@ export default function AdminLayout({children}) {
                   <ListItemIcon>
                     {menu.icon}
                   </ListItemIcon>
-                  <ListItemText primary={menu.name} />
+                  <ListItemText style={{color: '#000'}} primary={menu.name} />
                 </ListItemButton>
               </ListItem>
               </Link>

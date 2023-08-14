@@ -1,0 +1,35 @@
+.home-page header{
+    height: 70px;
+    background-color: var(--main-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-header a{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    color:#fff  
+}
+
+.list-menu-header, .action-header, .shoping-card{
+    display: flex;
+    align-items: center;
+}
+
+.action-header .search-btn{
+    margin-right: 30px;
+    transform: scaleX(-1);
+    font-size: 30px;
+}
+
+.list-menu-header li{
+    margin-left: 20px;
+}
+.list-menu-header a p {
+    letter-spacing: -0.5px; 
+  }
