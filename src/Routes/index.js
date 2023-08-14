@@ -5,8 +5,14 @@ import {
 import App from "../App";
 import Login from "../Component/LoginComponent";
 import ProductPage from "../Page/ProductPage/Index";
+import Home from "../Page/HomePage";
 
 const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home />,
+    },
+
     {
         path: "/admin",
         element: <App />,
