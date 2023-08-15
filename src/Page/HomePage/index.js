@@ -4,20 +4,17 @@ import "./style.css"
 import HeaderClient from '../../Layout/HeaderClient'
 import BannerClient from '../../Layout/BannerClient'
 import FooterClient from '../../Layout/FooterClient'
+import BodyClient from '../../Layout/BodyClient'
 
 export default function Home() {
   return (
     <div className='home-page'>
       <HeaderClient />
 
-      <main>
         <div className='container'>
           <BannerClient />
-
-
-          <div className='product-list'></div>
+          <BodyClient/>
         </div>
-      </main>
 
       <FooterClient/>
     </div>

@@ -21,6 +21,7 @@
 .top-banner{
     justify-content: space-around;
     padding: 10px;
+    padding-top: 80px;
 }
 .top-banner,.ads-banner{
     display: flex;

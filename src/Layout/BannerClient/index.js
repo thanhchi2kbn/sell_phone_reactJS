@@ -103,7 +103,7 @@ export default function BannerClient() {
                                 <p className=''>Tai nghe Airpods 3 Rep 1562U-M</p>
                                 <p><span style={{textDecoration: "line-through", color:"#b4b5bb"}}>950.000 ₫</span> 490.000 ₫</p>
                             </div>
-                        </div>
+                         </div>
 
                         <div className='flash-sale-item'><span className='on-sale'>Giảm giá</span>
                         

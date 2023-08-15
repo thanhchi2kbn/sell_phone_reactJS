@@ -1,0 +1,7 @@
+.product-list{
+    height: 600px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
