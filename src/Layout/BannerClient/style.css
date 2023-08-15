@@ -74,8 +74,8 @@
 
 .flash-sale-banner{
     background-color: #CD1A1A;
-    height: 440px;
     border-radius: 10px;
+    padding: 16px;
 }
 
 .flash-sale-title{
@@ -87,7 +87,10 @@
 
 .flash-sale-list{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto
 
 }
 
