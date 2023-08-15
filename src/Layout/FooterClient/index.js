@@ -12,6 +12,9 @@ import lg_mst from "../../Assets/image/logo-master.png";
 import lg_ssp from "../../Assets/image/logo-samsungpay.png";
 import lg_visa from "../../Assets/image/logo-visa.png";
 import lg_vnp from "../../Assets/image/logo-vnpay.png";
+import nhattin from "../../Assets/image/nhattin.jpg";
+import vnpost from "../../Assets/image/vnpost.jpg";
+import bct from "../../Assets/image/logo-bct.png";
 
 export default function FooterClient() {
   return (
@@ -105,15 +108,15 @@ export default function FooterClient() {
               <p className='footer-item-title'>Hình Thức Vận Chuyển</p>
               <ul className='list-payment'>
                 <li>
-                  <img src={lg_atm}></img>
+                  <img src={nhattin}></img>
                 </li>
 
                 <li>
-                  <img src={lg_mst}></img>
+                  <img src={vnpost}></img>
                 </li>
 
                 <li>
-                  <img src={lg_visa}></img>
+                  <img src={bct}></img>
                 </li>
               </ul>
             </div>
