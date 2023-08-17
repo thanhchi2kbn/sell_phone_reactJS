@@ -11,20 +11,29 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { MENUS } from '../Routes/constants';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 const drawerWidth = 240;
 
-export default function AdminLayout({children}) {
+export default function AdminLayout({ children }) {
+  const navigate = useNavigate()
+  const handleLogOut = () =>{
+    localStorage.removeItem("token");
+    navigate("/")
+  }
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-        <Toolbar>
+        <Toolbar style={{display:"flex", justifyContent: "space-between"}}>
           <Typography variant="h6" noWrap component="div">
-            Clipped drawer
+            DashBoard
           </Typography>
+          <Button variant="contained" color="error" onClick={handleLogOut}>
+            LogOut
+          </Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -39,16 +48,16 @@ export default function AdminLayout({children}) {
         <Box sx={{ overflow: 'auto' }}>
           <List>
             {MENUS.map((menu, index) => (
-            <Link to={menu.path} key={menu.path}>
-              <ListItem key={menu.path} disablePadding>
+              /* <Link to={menu.path} key={menu.path}> */
+              <ListItem key={menu.path} disablePadding onClick={() => { navigate(menu.path) }}>
                 <ListItemButton>
                   <ListItemIcon>
                     {menu.icon}
                   </ListItemIcon>
-                  <ListItemText style={{color: '#000'}} primary={menu.name} />
+                  <ListItemText style={{ color: '#000' }} primary={menu.name} />
                 </ListItemButton>
               </ListItem>
-              </Link>
+              /* </Link> */
             ))}
           </List>
         </Box>
@@ -56,8 +65,8 @@ export default function AdminLayout({children}) {
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
-        {children} 
-        <Outlet/>     
+        {children}
+        <Outlet />
       </Box>
     </Box>
   );

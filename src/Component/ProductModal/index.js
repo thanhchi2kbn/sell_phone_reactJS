@@ -4,17 +4,14 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import ProductModalContext from '../../Contexts/ProductModalContext';
 import ProductDetailFields from './ProductDetailFields';
-import { InputAdornment, MenuItem } from '@mui/material';
+import { InputAdornment } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import ProductApi from '../../Apis/ProductApi';
 var defaultImg = "https://doingoai.bacgiang.gov.vn/sites/default/files/dang-cap-nhat_4_3.png"
-const brands = ['Apple', 'Samsung', 'Oppo']
-const os = ['IOS', 'Androi']
 const validationSchema = yup.object({
     name: yup
         .string('Enter product name')
@@ -32,7 +29,7 @@ const ProductModal = () => {
 
     const { isOpenModal, setIsOpenModal, initDataModal, setInitDataModal, handleSearch }
         = React.useContext(ProductModalContext)
-    console.log(initDataModal)
+    // console.log(initDataModal)
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {

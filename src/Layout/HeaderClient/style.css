@@ -21,13 +21,14 @@
     color:#fff  
 }
 
-.list-menu-header, .action-header, .shoping-card{
+.list-menu-header, .action-header, .shoping-card, .sign-in-btn{
     display: flex;
     align-items: center;
+    gap: 2px;
 }
 
 .action-header .search-btn{
-    margin-right: 30px;
+    margin-right: 20px;
     transform: scaleX(-1);
     font-size: 30px;
 }
@@ -38,3 +39,8 @@
 .list-menu-header a p {
     letter-spacing: -0.5px; 
   }
+
+.sign-in-btn{
+    margin-left: 20px;
+
+}

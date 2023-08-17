@@ -6,6 +6,7 @@ import App from "../App";
 import Login from "../Component/LoginComponent";
 import ProductPage from "../Page/ProductPage/Index";
 import Home from "../Page/HomePage";
+import PrivateComponent from "../Component/PrivateComponent";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "product",
-                element: <ProductPage/>,
+                element: <PrivateComponent component={ProductPage}/>,
             },
 
             {

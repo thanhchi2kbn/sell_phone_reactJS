@@ -6,9 +6,13 @@ import ConstructionIcon from '@mui/icons-material/Construction';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LoginIcon from '@mui/icons-material/Login';
 import './style.css'
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function HeaderClient() {
+    const navigate = useNavigate()
     return (
         <>
             <header>
@@ -25,8 +29,16 @@ export default function HeaderClient() {
                 <div className='action-header'>
                     <div className='search-btn'><SearchIcon /></div>
                     <div className='shoping-card'>
-                        <ShoppingCartIcon />
-                        <p>Giỏ Hàng</p>
+                        <Button color="error" style={{color: "#fff"}}>
+                            <ShoppingCartIcon />
+                            <p>Giỏ Hàng</p>
+                        </Button>
+                    </div>
+                    <div className='sign-in-btn'>
+                        <Button color="error" style={{color: "#fff"}} onClick={() => navigate("/login")}>
+                            <LoginIcon/>
+                            <p>Login</p>
+                        </Button>
                     </div>
                 </div>
             </header>

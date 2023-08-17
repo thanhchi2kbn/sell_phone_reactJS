@@ -7,6 +7,10 @@ const getAll = (config) =>{
     return axiosClient.get(url,config)
 };
 
+// const get = (url1,config) =>{
+//     return axiosClient.get(url1,config)
+// };
+
 const create = (body) => {
     return axiosClient.post(url,body)
 }

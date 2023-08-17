@@ -5,7 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -13,21 +12,51 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import bg from '../../Assets/image/bg.jpg'
-
-
-// TODO remove, this demo shouldn't need to reset the theme.
+import { useNavigate } from 'react-router-dom';
+import axiosClient from '../../Apis/Api';
+import { store } from '../../Store';
+import { showNotification } from '../../Store/Actions/NotificationActions';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 const defaultTheme = createTheme();
 
 export default function SignInSide() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  const navigate = useNavigate();
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email('Địa chỉ email không hợp lệ')
+        .required('Vui lòng nhập email'),
+      password: Yup.string().required('Vui lòng nhập mật khẩu'),
+    }),
+    onSubmit: async (values) => {
+      try {
+        const response = await axiosClient.get("/users", {
+          params: {
+            email: values.email,
+            password: values.password,
+          },
+        });
+
+        if (response.data.length) {
+          store.dispatch(showNotification("Đăng nhập thành công"));
+          localStorage.setItem("token", "token123");
+          navigate("/admin/product");
+        } else {
+          store.dispatch(showNotification("Đăng nhập thất bại"));
+          console.log("fail");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    },
+  });
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -63,30 +92,30 @@ export default function SignInSide() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <form onSubmit={formik.handleSubmit} noValidate>
               <TextField
                 margin="normal"
-                required
                 fullWidth
                 id="email"
                 label="Email Address"
                 name="email"
                 autoComplete="email"
                 autoFocus
+                {...formik.getFieldProps('email')}
+                error={formik.touched.email && formik.errors.email}
+                helperText={formik.touched.email && formik.errors.email}
               />
               <TextField
                 margin="normal"
-                required
                 fullWidth
                 name="password"
                 label="Password"
                 type="password"
                 id="password"
                 autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+                {...formik.getFieldProps('password')}
+                error={formik.touched.password && formik.errors.password}
+                helperText={formik.touched.password && formik.errors.password}
               />
               <Button
                 type="submit"
@@ -97,19 +126,9 @@ export default function SignInSide() {
                 Sign In
               </Button>
               <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
+                {/* Grid items here */}
               </Grid>
-              
-            </Box>
+            </form>
           </Box>
         </Grid>
       </Grid>

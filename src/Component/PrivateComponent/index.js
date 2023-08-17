@@ -1,10 +1,15 @@
+import { Navigate } from "react-router-dom"
 import AdminLayout from "../../Layout/AdminLayout"
 
-const PrivateComponent = (Component) => {
+const PrivateComponent = ({component: Component}) => {
+    const isAuthenticated = localStorage.getItem("token")
     return (
+
+        isAuthenticated ? (
         <AdminLayout>
             <Component/>
-        </AdminLayout>
+        </AdminLayout>): (
+        <Navigate to="/login"/>)
     )
 }
 

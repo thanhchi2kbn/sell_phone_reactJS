@@ -56,5 +56,11 @@
       },
       "id": 4
     }
+  ],
+  "users": [
+    {
+      "email": "chithanhtlu@gmail.com",
+      "password": "123456"
+    }
   ]
 }
