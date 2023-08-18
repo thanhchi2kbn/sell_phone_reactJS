@@ -18,10 +18,12 @@ import { store } from '../../Store';
 import { showNotification } from '../../Store/Actions/NotificationActions';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
 
 const defaultTheme = createTheme();
 
 export default function SignInSide() {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -45,12 +47,17 @@ export default function SignInSide() {
         });
 
         if (response.data.length) {
-          store.dispatch(showNotification("Đăng nhập thành công"));
+          dispatch(showNotification({
+            content: 'Đăng nhập thành công',
+            typeToast: 'success',
+          }));
           localStorage.setItem("token", "token123");
           navigate("/admin/product");
         } else {
-          store.dispatch(showNotification("Đăng nhập thất bại"));
-          console.log("fail");
+          dispatch(showNotification({
+            content: 'Đăng nhập thất bại',
+            typeToast: 'error',
+          }));
         }
       } catch (error) {
         console.error(error);

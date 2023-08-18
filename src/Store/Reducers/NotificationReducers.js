@@ -1,6 +1,7 @@
 const initialState = {
     isOpen: false,
-    content: ""
+    content: "",
+    typeToast: 'success', // Mặc định là success
 }
 
 
@@ -12,6 +13,7 @@ export const NotificationReducers = (state = initialState, action) => {
                 ...state,
                 isOpen: true,
                 content: action.payload.content,
+                typeToast: action.payload.typeToast,
             }
         case 'HIDE_NOTIFICATION':
             return{

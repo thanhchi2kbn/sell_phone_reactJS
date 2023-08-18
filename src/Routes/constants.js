@@ -1,6 +1,6 @@
 import BrandingWatermarkIcon from '@mui/icons-material/BrandingWatermark';
-import AppleIcon from '@mui/icons-material/Apple';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 export const MENUS = [
     {
         name: "Product Manager",
@@ -9,14 +9,8 @@ export const MENUS = [
     },
 
     {
-        name: "Brand Manager",
-        path: "/admin/brand",
-        icon: <BrandingWatermarkIcon /> 
-    },
-
-    {
-        name: "OS Manager",
-        path: "/admin/os",
-        icon: <AppleIcon /> 
+        name: "User Manager",
+        path: "/admin/user",
+        icon: <AccountBoxIcon /> 
     },
 ]

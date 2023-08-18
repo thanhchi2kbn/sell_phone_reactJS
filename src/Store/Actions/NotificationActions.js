@@ -1,8 +1,9 @@
-export const showNotification = (content) =>{
+export const showNotification = ({content,typeToast}) =>{
     return{
         type: "SHOW_NOTIFICATION",
         payload: {
             content,
+            typeToast,
         },
     }
 }

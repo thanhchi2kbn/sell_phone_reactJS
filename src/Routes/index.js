@@ -7,6 +7,7 @@ import Login from "../Component/LoginComponent";
 import ProductPage from "../Page/ProductPage/Index";
 import Home from "../Page/HomePage";
 import PrivateComponent from "../Component/PrivateComponent";
+import UserPage from "../Page/UserPage";
 
 const router = createBrowserRouter([
     {
@@ -27,13 +28,8 @@ const router = createBrowserRouter([
             },
 
             {
-                path: "brand",
-                element: <PrivateComponent component={()=>(<h1>brand</h1>)}/>,
-            },
-
-            {
-                path: "os",
-                element: <PrivateComponent component={()=>(<h1>os</h1>)}/>,
+                path: "user",
+                element: <PrivateComponent component={UserPage}/>,
             },
         ],
     },
