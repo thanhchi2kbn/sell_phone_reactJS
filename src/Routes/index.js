@@ -16,8 +16,11 @@ const router = createBrowserRouter([
 
     {
         path: "/admin",
-        element: <App />,
         children: [
+            {
+                path: "",
+                element: <PrivateComponent component={ProductPage}/>,
+            },
             {
                 path: "product",
                 element: <PrivateComponent component={ProductPage}/>,
@@ -25,12 +28,12 @@ const router = createBrowserRouter([
 
             {
                 path: "brand",
-                element: <h1>brand</h1>,
+                element: <PrivateComponent component={()=>(<h1>brand</h1>)}/>,
             },
 
             {
                 path: "os",
-                element: <h1>os</h1>,
+                element: <PrivateComponent component={()=>(<h1>os</h1>)}/>,
             },
         ],
     },

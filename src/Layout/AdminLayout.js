@@ -66,7 +66,6 @@ export default function AdminLayout({ children }) {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
         {children}
-        <Outlet />
       </Box>
     </Box>
   );
