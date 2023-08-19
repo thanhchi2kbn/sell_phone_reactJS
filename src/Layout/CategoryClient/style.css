@@ -1,0 +1,14 @@
+.category{
+    display: flex;
+}
+
+.category h4{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.divider{
+    border-bottom: 1px dashed red;
+    width: 80%;
+    transform: translateY(-50%);
+}

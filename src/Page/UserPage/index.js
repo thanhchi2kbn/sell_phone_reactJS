@@ -43,7 +43,7 @@ export default function UserPage() {
     <UserModalContext.Provider value={{isOpenModal,setIsOpenModal,initDataModal,setInitDataModal,handleSearch}}>
 
       <UserModal/>
-      <div className='main-content' >
+      <div className='main-content1' >
         <Paper component="form" sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400 }}>
           <InputBase
             inputRef={ref}

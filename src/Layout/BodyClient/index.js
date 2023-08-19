@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./style.css"
 import ProductItem from '../ProductItem'
 import ProductApi from '../../Apis/ProductApi'
+import CategoryClient from '../CategoryClient'
 
 
 export default function BodyClient() {
@@ -20,10 +21,13 @@ export default function BodyClient() {
 
 
   return (
-    <div className='product-list'>
+    <>
+      <CategoryClient/>
+      <div className='product-list'>
+        
+        {listProduct.map((item)=>(<ProductItem item={item}/>))}
 
-      {listProduct.map((item)=>(<ProductItem item={item}/>))}
-
-    </div>
+      </div>
+    </>
   )
 }

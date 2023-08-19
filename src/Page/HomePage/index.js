@@ -8,15 +8,18 @@ import BodyClient from '../../Layout/BodyClient'
 
 export default function Home() {
   return (
-    <div className='home-page'>
-      <HeaderClient />
+    <>
+      <div className='home-page'>
+        <HeaderClient />
 
         <div className='container'>
           <BannerClient />
-          <BodyClient/>
+          <BodyClient />
         </div>
 
-      <FooterClient/>
-    </div>
+        <FooterClient />
+      </div>
+
+    </>
   )
 }

@@ -82,8 +82,8 @@ export default function BannerClient() {
                     </div>
 
                     <div className='ads-banner'>
-                        <div><img className='banner-1' src={banner1}></img></div>
-                        <div>
+                        <div style={{width:"66.6666%"}}><img className='banner-1' src={banner1}></img></div>
+                        <div style={{width:"33.3333%"}}>
                             <img className='banner-2' src={banner2}></img>
                             <img className='banner-3' src={banner3}></img>
                         </div>

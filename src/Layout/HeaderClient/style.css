@@ -44,3 +44,11 @@
     margin-left: 20px;
 
 }
+
+.action-header p{
+    font-size: 13px;
+    font-weight: 700;
+    color:#fff  ;
+    letter-spacing: -0.5px; 
+
+}

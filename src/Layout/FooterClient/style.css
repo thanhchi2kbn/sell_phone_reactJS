@@ -2,6 +2,7 @@
     background-color: #BF2B2B;
     color: #fff;
     padding: 10px;
+    transform: translateY(20px);
 }
 
 .footer-list{

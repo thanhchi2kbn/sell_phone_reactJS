@@ -155,7 +155,70 @@
         "memory": "2TB",
         "color": "Gold"
       }
+    },
+
+    {
+      "id": 12,
+      "name": "iPhone 20",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2023/07/8G-cac-mau-247x296.jpg",
+      "price": 20000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "26 MP",
+        "display": "Super Retina XDR OLED, 6.7 inches",
+        "memory": "2TB",
+        "color": "Gold"
+      }
+    },
+
+    {
+      "id": 13,
+      "name": "iPhone 20",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2019/12/2694b0db5ab9dc2eb9d3270_master_d2c37474ff224c3bb7558dcac56ff272_master_a6f8f8eb934a440190c6d87788bb9b27-min-247x296.png",
+      "price": 20000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "26 MP",
+        "display": "Super Retina XDR OLED, 6.7 inches",
+        "memory": "2TB",
+        "color": "Gold"
+      }
+    },
+
+    {
+      "id": 14,
+      "name": "iPhone 20",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2019/12/36748797175081877_iphone-xr-do_f9143a5eaa8e4e71877c454dc53814b2_master_7e6a475209fa473ab26021b322b29a04.png-247x296.jpg",
+      "price": 20000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "26 MP",
+        "display": "Super Retina XDR OLED, 6.7 inches",
+        "memory": "2TB",
+        "color": "Gold"
+      }
+    },
+
+    {
+      "id": 15,
+      "name": "iPhone 20",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2019/12/iphone_7_rose_643af3d5613e41f6b55e9842d3b355f6-247x296.png",
+      "price": 20000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "26 MP",
+        "display": "Super Retina XDR OLED, 6.7 inches",
+        "memory": "2TB",
+        "color": "Gold"
+      }
     }
+
+
+
 
   ],
 
