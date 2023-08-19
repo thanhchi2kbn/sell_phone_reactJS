@@ -30,6 +30,7 @@ const ProductModal = () => {
 
     const { isOpenModal, setIsOpenModal, initDataModal, setInitDataModal, handleSearch }
         = React.useContext(ProductModalContext)
+    const [image, setImage ] = React.useState("")
     // console.log(initDataModal)
     const formik = useFormik({
         enableReinitialize: true,
@@ -103,6 +104,9 @@ const ProductModal = () => {
         })
     }
 
+    const handleFile = (event) => {
+        setImage(event.target.files[0])
+    }
     
     return (
         <Dialog open={isOpenModal} onClose={handleClose}>
@@ -122,6 +126,14 @@ const ProductModal = () => {
                         helperText={formik.touched.image && formik.errors.image}
                         
                     />
+                    
+                    {image? (<img src={URL.createObjectURL(image)} style={{width:"100px",height:"100px"}}></img>):(
+                    <Button variant='contained' component="label">
+                        Upload File
+                        <input type='file' hidden onChange={handleFile}/>
+                    </Button>
+                    )}
+
                     {/* <InputFileUpload/> */}
                     <p >Product Details:</p>
 
