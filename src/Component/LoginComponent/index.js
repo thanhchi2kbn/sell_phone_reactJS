@@ -15,7 +15,7 @@ import bg from '../../Assets/image/bg.jpg'
 import { useNavigate } from 'react-router-dom';
 import axiosClient from '../../Apis/Api';
 import { store } from '../../Store';
-import { showNotification } from '../../Store/Actions/NotificationActions';
+import { loginAction, showNotification } from '../../Store/Actions/NotificationActions';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
@@ -39,26 +39,27 @@ export default function SignInSide() {
     }),
     onSubmit: async (values) => {
       try {
-        const response = await axiosClient.get("/users", {
-          params: {
-            email: values.email,
-            password: values.password,
-          },
-        });
+        dispatch(loginAction(values.email,values.password))
+        // const response = await axiosClient.get("/users", {
+        //   params: {
+        //     email: values.email,
+        //     password: values.password,
+        //   },
+        // });
 
-        if (response.data.length) {
-          dispatch(showNotification({
-            content: 'Đăng nhập thành công',
-            typeToast: 'success',
-          }));
-          localStorage.setItem("token", "token123");
-          navigate("/admin/product");
-        } else {
-          dispatch(showNotification({
-            content: 'Đăng nhập thất bại',
-            typeToast: 'error',
-          }));
-        }
+        // if (response.data.length) {
+        //   dispatch(showNotification({
+        //     content: 'Đăng nhập thành công',
+        //     typeToast: 'success',
+        //   }));
+        //   localStorage.setItem("token", "token123");
+        //   navigate("/admin/product");
+        // } else {
+        //   dispatch(showNotification({
+        //     content: 'Đăng nhập thất bại',
+        //     typeToast: 'error',
+        //   }));
+        // }
       } catch (error) {
         console.error(error);
       }

@@ -11,6 +11,7 @@ import { InputAdornment } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import ProductApi from '../../Apis/ProductApi';
+import InputFileUpload from './InputFileUpload';
 var defaultImg = "https://doingoai.bacgiang.gov.vn/sites/default/files/dang-cap-nhat_4_3.png"
 const validationSchema = yup.object({
     name: yup
@@ -101,6 +102,8 @@ const ProductModal = () => {
             details
         })
     }
+
+    
     return (
         <Dialog open={isOpenModal} onClose={handleClose}>
             <form onSubmit={formik.handleSubmit}>
@@ -117,7 +120,9 @@ const ProductModal = () => {
                         onBlur={formik.handleBlur}
                         error={formik.touched.image && Boolean(formik.errors.image)}
                         helperText={formik.touched.image && formik.errors.image}
+                        
                     />
+                    {/* <InputFileUpload/> */}
                     <p >Product Details:</p>
 
                     
