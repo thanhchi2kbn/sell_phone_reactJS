@@ -1,0 +1,161 @@
+:root {
+    --main-color: #DB2525;
+  }
+
+li {
+    list-style-type: none;
+}
+
+.home-page{
+    background-color: #fff !important;
+    position: relative;
+
+}
+
+.container{
+    background-color: #fff;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: none !important;
+    margin-top: 70px;
+
+}
+
+.wrapper{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main-content{
+    width: 70%;
+}
+
+.side-bar{
+    margin-left: 20px;
+    width: 30%;;
+    border: 1px solid #ccc;
+    font-size: 40px;
+    text-align: center;
+}
+
+.detail-product-img{
+    text-align: center;
+    padding: 5px 30px;
+    background: #fff;
+    border-radius: 15px;
+    max-width: 320px;
+    min-height: 320px;
+    box-shadow: rgb(60 64 67 / 10%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+    color: #5e5e5e;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    
+}
+
+.detail-product-img img{
+    width: 100%;
+}
+
+.detail-product{
+    display: flex;
+}
+
+.detail-info{
+    width: 100%;
+}
+
+.detail-info h1{
+    font: normal normal 34px / 44px "Roboto Condensed", Helvetica, Arial, Verdana, sans-serif;
+    text-transform: none;
+    color: #5e5e5e;
+    margin-top: 0;
+}
+
+.detail-info p{
+    color: #e31616;
+    font: normal 20px / 30px "Roboto Condensed", Helvetica, Arial, Verdana, sans-serif;
+    text-transform: none;
+
+}
+
+.detail-info ul{
+    padding-left: 0;
+}
+
+.promotion{
+    padding: 10px 16px;
+    background: #fff;
+    border-radius: 15px;
+    max-width: 350px;
+    min-height: 182px;
+    box-shadow: rgb(60 64 67 / 10%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+    color: #5e5e5e;
+    margin-right: 50px;
+    width: 50%;
+
+}
+
+.header-promotion{
+    background: #e31616;
+    padding: 5px 20px;
+    margin: -5px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    display: flex;
+    border-radius: 10px;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.header-promotion p{  
+    margin: 0;
+    padding: 2px;
+}
+
+.list-promotion ul {
+    padding-left: 20px;
+}
+
+.list-promotion li {
+    list-style-type: disc;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-price{
+    color: #e31616;
+    font: normal 20px / 30px "Roboto Condensed", Helvetica, Arial, Verdana, sans-serif;
+    text-transform: none;
+
+}
+
+.sub-detail{
+    display: flex;
+}
+
+.pay-now p{
+    margin: 0;
+}
+.pay-now p span{
+    font-size: 12px;
+}
+
+.pay-now button{
+    
+    color: #ffffff !important;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.buy-product{
+    width: 50%;
+}
+

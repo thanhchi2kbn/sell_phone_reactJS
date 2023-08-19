@@ -8,11 +8,17 @@ import ProductPage from "../Page/ProductPage/Index";
 import Home from "../Page/HomePage";
 import PrivateComponent from "../Component/PrivateComponent";
 import UserPage from "../Page/UserPage";
+import ProductDetail from "../Page/ProductDetail";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
+    },
+
+    {
+        path: "/detail/:id", // Thêm :id để truyền giá trị ID từ đường dẫn URL
+        element: <ProductDetail />,
     },
 
     {

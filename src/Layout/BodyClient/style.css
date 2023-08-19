@@ -1,7 +1,9 @@
 .product-list{
-    height: 600px;
-    text-align: center;
+    padding: 10px ;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+
 }
+

@@ -1,4 +1,5 @@
 {
+
   "phones": [
     {
       "id": 1,
@@ -12,44 +13,153 @@
         "color": "Green"
       },
       "price": 15000000,
-      "image": "https://cdn.hoanghamobile.com/i/preview/Uploads/2020/11/06/apple-iphone-12-mini-5.png"
+      "image": "https://mobilelegend.vn/wp-content/uploads/2021/06/iphone11-green-select-2019_fdf13acfd9cc4321b4968409d07d561d-247x296.png"
     },
     {
       "id": 2,
-      "name": "Galaxy S21",
+      "name": "iPhone 13 Pro Max Lock",
       "details": {
-        "brand": "Samsung",
-        "operatingSystem": "Android",
+        "brand": "Apple",
+        "operatingSystem": "iOS",
         "camera": "12 MP",
-        "display": "Dynamic AMOLED 2X, 6.2 inches",
-        "memory": "128GB",
+        "display": "Super Retina XDR OLED, 6.2 inches",
+        "memory": "256GB",
         "color": "Blue"
       },
-      "price": 12000000,
-      "image": "https://truesmart.com.vn/wp-content/uploads/samsung-galaxy-s21-ultra-bac-600x600-1-200x200-1.jpg"
+      "price": 13890000,
+      "image": "https://mobilelegend.vn/wp-content/uploads/2021/09/iphone-13-pro-max-lock-247x296.jpeg"
     },
     {
       "id": 3,
-      "name": "Pixel 5",
+      "name": "iPhone SE 2020 ",
       "details": {
-        "brand": "Google",
-        "operatingSystem": "Android",
+        "brand": "Apple",
+        "operatingSystem": "iOS",
         "camera": "12.2 MP",
-        "display": "OLED, 6.0 inches",
-        "memory": "128GB",
-        "color": "Black"
+        "display": "LCD, 5.7 inches",
+        "memory": "64GB",
+        "color": "Red"
       },
       "price": 9000000,
-      "image": "https://cdn.tgdd.vn/Products/Images/42/198422/google-pixel-5-600jpg-600x600.jpg"
+      "image": "https://mobilelegend.vn/wp-content/uploads/2021/10/iphonese2020lock-247x296.jpg"
     },
     {
-      "name": "Hồ Chí Thành 6",
-      "image": {},
-      "price": 2200000,
-      "details": {},
-      "id": 4
+      "id": 4,
+      "name": "iPhone 13",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2021/09/iphone-13-lock-247x296.jpeg",
+      "price": 13000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "14 MP",
+        "display": "Super Retina XDR OLED, 6.2 inches",
+        "memory": "128GB",
+        "color": "Pink"
+      }
+    },
+
+    {
+      "id": 5,
+      "name": "iPhone 14",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2020/08/iphone-11prm-min-247x296.png",
+      "price": 14000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "14 MP",
+        "display": "Super Retina XDR OLED, 6.2 inches",
+        "memory": "128GB",
+        "color": "Black"
+      }
+    },
+    {
+      "id": 6,
+      "name": "iPhone 15",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2021/06/iphone-12-white-select-2020_b8980cf3d0624321b84f85e939587006-247x296.png",
+      "price": 15000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "16 MP",
+        "display": "Super Retina XDR OLED, 6.3 inches",
+        "memory": "256GB",
+        "color": "White"
+      }
+    },
+    {
+      "id": 7,
+      "name": "iPhone 16",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2021/07/iphone12prm-min-e1627209967391-247x296.png",
+      "price": 16000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "18 MP",
+        "display": "Super Retina XDR OLED, 6.4 inches",
+        "memory": "512GB",
+        "color": "Gold"
+      }
+    },
+    {
+      "id": 8,
+      "name": "iPhone 17",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2019/12/71945393060_iphone-xs-max-gold_78ec82d78dc04be59c172e485b31021b_master_70e0c79cd96d46869e5a26f26e96c64f-247x296.jpg",
+      "price": 17000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "20 MP",
+        "display": "Super Retina XDR OLED, 6.5 inches",
+        "memory": "512GB",
+        "color": "Gold"
+      }
+    },
+    {
+      "id": 9,
+      "name": "iPhone 18",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2021/05/iphone_x_sliver_2afe1ff68f404eccaa868afcff83bc3e_master-247x296.png",
+      "price": 18000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "22 MP",
+        "display": "Super Retina XDR OLED, 6.5 inches",
+        "memory": "1TB",
+        "color": "White"
+      }
+    },
+    {
+      "id": 10,
+      "name": "iPhone 19",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2019/12/iphone_7_plus_sliver_f1fc49c3954c473a9dc9e52bedea04e7-247x296.png",
+      "price": 19000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "24 MP",
+        "display": "Super Retina XDR OLED, 6.6 inches",
+        "memory": "1TB",
+        "color": "Space Gray"
+      }
+    },
+    {
+      "id": 11,
+      "name": "iPhone 20",
+      "image": "https://mobilelegend.vn/wp-content/uploads/2019/12/2694b0db5ab9dc2eb9d3270_master_d2c37474ff224c3bb7558dcac56ff272_master_a6f8f8eb934a440190c6d87788bb9b27-min-247x296.png",
+      "price": 20000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "iOS",
+        "camera": "26 MP",
+        "display": "Super Retina XDR OLED, 6.7 inches",
+        "memory": "2TB",
+        "color": "Gold"
+      }
     }
+
   ],
+
+
   "users": [
     {
       "email": "chithanhtlu@gmail.com",
