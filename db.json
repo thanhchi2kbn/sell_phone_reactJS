@@ -1,5 +1,4 @@
 {
-
   "phones": [
     {
       "id": 1,
@@ -57,7 +56,6 @@
         "color": "Pink"
       }
     },
-
     {
       "id": 5,
       "name": "iPhone 14",
@@ -156,7 +154,6 @@
         "color": "Gold"
       }
     },
-
     {
       "id": 12,
       "name": "iPhone 20",
@@ -171,7 +168,6 @@
         "color": "Gold"
       }
     },
-
     {
       "id": 13,
       "name": "iPhone 20",
@@ -186,7 +182,6 @@
         "color": "Gold"
       }
     },
-
     {
       "id": 14,
       "name": "iPhone 20",
@@ -201,7 +196,6 @@
         "color": "Gold"
       }
     },
-
     {
       "id": 15,
       "name": "iPhone 20",
@@ -215,14 +209,22 @@
         "memory": "2TB",
         "color": "Gold"
       }
+    },
+    {
+      "name": "Hồ Chí Thành",
+      "image": "https://doingoai.bacgiang.gov.vn/sites/default/files/dang-cap-nhat_4_3.png",
+      "price": 20000000,
+      "details": {
+        "brand": "Apple",
+        "operatingSystem": "IOS",
+        "camera": "12 px",
+        "display": "OLED, 6.0 inches",
+        "memory": "128 GB",
+        "color": "Black"
+      },
+      "id": 16
     }
-
-
-
-
   ],
-
-
   "users": [
     {
       "email": "chithanhtlu@gmail.com",

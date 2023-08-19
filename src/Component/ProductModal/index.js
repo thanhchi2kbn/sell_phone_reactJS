@@ -11,7 +11,6 @@ import { InputAdornment } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import ProductApi from '../../Apis/ProductApi';
-import InputFileUpload from './InputFileUpload';
 var defaultImg = "https://doingoai.bacgiang.gov.vn/sites/default/files/dang-cap-nhat_4_3.png"
 const validationSchema = yup.object({
     name: yup
@@ -31,7 +30,7 @@ const ProductModal = () => {
     const { isOpenModal, setIsOpenModal, initDataModal, setInitDataModal, handleSearch }
         = React.useContext(ProductModalContext)
     const [image, setImage ] = React.useState("")
-    // console.log(initDataModal)
+    console.log(initDataModal)
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
@@ -43,8 +42,8 @@ const ProductModal = () => {
                 brand:   "",
                 operatingSystem: "",
                 camera:  "",
-                display: "",
-                memory: "",
+                display:  "",
+                memory:  "",
                 color: "",
             }
 
@@ -127,12 +126,12 @@ const ProductModal = () => {
                         
                     />
                     
-                    {image? (<img src={URL.createObjectURL(image)} style={{width:"100px",height:"100px"}}></img>):(
+                    {/* {image? (<img src={URL.createObjectURL(image)} style={{width:"100px",height:"100px"}}></img>):(
                     <Button variant='contained' component="label">
                         Upload File
                         <input type='file' hidden onChange={handleFile}/>
                     </Button>
-                    )}
+                    )} */}
 
                     {/* <InputFileUpload/> */}
                     <p >Product Details:</p>
