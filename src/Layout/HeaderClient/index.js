@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import AppleIcon from '@mui/icons-material/Apple';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -10,15 +10,23 @@ import LoginIcon from '@mui/icons-material/Login';
 import './style.css'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 export default function HeaderClient() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
     const navigate = useNavigate()
     return (
         <>
             <header>
                 <div className='icon-header'><img src='https://mobilelegend.vn/wp-content/uploads/2021/12/logo2022-1.png'></img></div>
                 <div className='menu-header'>
-                    <ul className='list-menu-header'>
+                   
+                    <ul className={`list-menu-header ${isMenuOpen ? 'open' : ''}`} id='list-menu-header'>
                         <li><a href='#'><HomeIcon /><p>TRANG CHỦ</p></a></li>
                         <li><a href='#'><AppleIcon /><p>SẢN PHẨM</p></a></li>
                         <li><a href='#'><LocalShippingIcon /><p>BẢO HÀNH</p></a></li>
@@ -29,18 +37,24 @@ export default function HeaderClient() {
                 <div className='action-header'>
                     <div className='search-btn'><SearchIcon /></div>
                     <div className='shoping-card'>
-                        <Button color="error" style={{color: "#fff"}}>
+                        <Button color="error" style={{ color: "#fff" }}>
                             <ShoppingCartIcon />
                             <p>Giỏ Hàng</p>
                         </Button>
                     </div>
                     <div className='sign-in-btn'>
-                        <Button color="error" style={{color: "#fff"}} onClick={() => navigate("/login")}>
-                            <LoginIcon/>
+                        <Button color="error" style={{ color: "#fff" }} onClick={() => navigate("/login")}>
+                            <LoginIcon />
                             <p>Login</p>
                         </Button>
                     </div>
+
+                    <div className='menu-icon' id='menu-icon' onClick={toggleMenu}>
+                        <MenuIcon />
+                    </div>
                 </div>
+
+               
             </header>
         </>
     )
