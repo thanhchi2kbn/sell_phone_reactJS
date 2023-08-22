@@ -34,6 +34,10 @@
     justify-content: center;
   }
 
+ header a :hover {
+    opacity: 0.7; /* Đặt giá trị opacity mong muốn */
+  }
+
   .action-header,
   .shoping-card,
   .sign-in-btn {
@@ -70,6 +74,8 @@
   
   /* Media queries cho tablet */
   @media (max-width: 1023px) and (min-width: 768px) {
+
+
     .list-menu-header li {
       margin-left: 5px;
     }
@@ -93,6 +99,7 @@
         display: block;
         font-size: 24px;
         cursor: pointer;
+        margin-right: 20px;
       }
       .list-menu-header.open {
         display: flex;
@@ -122,6 +129,9 @@
   
   /* Media queries cho điện thoại di động */
   @media (max-width: 767px) {
+    header .icon-header{
+      transform: scale(85%);
+    }
     .list-menu-header {
       display: none; /* Ẩn menu khi ở trạng thái điện thoại di động */
     }
@@ -143,6 +153,7 @@
         display: block;
         font-size: 30px;
         cursor: pointer;
+        margin-right: 20px;
       }
       .list-menu-header.open {
         display: flex;
@@ -175,6 +186,10 @@
 
       .search-btn{
         display: none;
+      }
+
+      .shoping-card{
+        transform: translateX(50%);
       }
   }
   

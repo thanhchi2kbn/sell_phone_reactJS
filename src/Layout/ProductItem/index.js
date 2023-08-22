@@ -18,7 +18,7 @@ export default function ProductItem({ item }) {
   return (
     <>
       <div className='product-item'>
-        <div style={{ minHeight: '240px' }}>
+        <div >
           <img
             className='product-item-img'
             src={item.image}
@@ -27,7 +27,7 @@ export default function ProductItem({ item }) {
             style={{ cursor: 'pointer' }} // Thêm CSS để con trỏ thành dấu nhấp nháy
           />
         </div>
-        <div>
+        <div className='product-item-info'>
           <h4 className='product-item-title' onClick={handleItemClick}>
             {item.name}
           </h4>

@@ -2,13 +2,18 @@
     display: flex;
 }
 
-.category h4{
-    width: 100%;
-    margin-left: 10px;
+.icon-category h4{
+    margin-left: 5px ;
+    margin-right: 10px ;
 }
 
 .divider{
     border-bottom: 1px dashed red;
-    width: 80%;
+    width: 100%;
     transform: translateY(-50%);
+    margin-right: 10px;
+}
+
+.icon-category{
+    display: flex;
 }

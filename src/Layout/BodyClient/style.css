@@ -2,8 +2,20 @@
     padding: 10px ;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-
-
 }
 
+
+  /* Media queries cho tablet */
+  @media (max-width: 1023px) and (min-width: 768px) {
+   
+  }
+
+@media (max-width: 500px) {
+    /* CSS dành cho màn hình nhỏ hơn 767px */
+    .product-list{
+        gap: 10px;
+    }
+  }

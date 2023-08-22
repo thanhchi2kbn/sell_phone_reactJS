@@ -6,9 +6,9 @@ import "./style.css"
 export default function CategoryClient() {
   return (
     <div className='category'>
-        <div style={{display: "flex", width: "20%"}}>
+        <div className='icon-category'>
             <h3><PhoneIphoneIcon/></h3>
-            <h4>IPHONE CHÍNH HÃNG </h4>
+            <h4>IPHONE </h4>
         </div>
 
         <div className='divider'></div>

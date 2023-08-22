@@ -35,6 +35,10 @@
     border-radius: 6px;
 }
 
+.sub-banner{
+    width: 33.3333%;
+}
+
 
 .ads-banner .banner-2, .ads-banner .banner-3{
     width: 100%;
@@ -66,6 +70,13 @@
     letter-spacing: -0.5px; 
     font-weight: 500;
 }
+
+.trending-item:hover a{
+    color: #CD1A1A;
+    font-weight: 700;
+}
+
+
 .trending-pos{
     text-align: left;
     font-weight: bold;
@@ -77,22 +88,30 @@
 .flash-sale-banner{
     background-color: #CD1A1A;
     border-radius: 10px;
-    padding: 16px;
+    padding: 10px 16px 30px;
 }
 
 .flash-sale-title{
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-    margin-bottom: 16px ;
+    max-width: 500px;
+    margin: 10px auto;
+    
 }
+
+.flash-sale-title img{
+  width: 100%;
+  height: auto;
+    
+}
+
 
 .flash-sale-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto
+    justify-content: space-around;
+    align-items: center;
+
 
 }
 
@@ -100,14 +119,15 @@
     padding: 5px 10px;
     background: #fff;
     border-radius: 15px;
+    margin-bottom: 16px;
     min-height: 320px;
     max-width: 204px;
     position: relative;
 }
 
 .flash-sale-item img{
-    width: 204px;
-    height: 244px;
+    width: 100%;
+    height: auto;
 }
 
 .flash-sale-item p{
@@ -134,3 +154,48 @@
     background-color: #e1474d;
     position: absolute;
 }
+
+/* ----------------------------------------------------------------- */
+/* CSS cho tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .top-banner{
+        display: flex;
+        flex-direction:column-reverse;
+    }
+    .trending-banner {
+        max-width: 700px;
+        margin: 16px auto;
+        width: 100%;
+        
+    }
+
+    .ads-banner{
+        width: 100%;
+    }
+  }
+  
+  /* CSS cho điện thoại di động */
+  @media (max-width: 767px) {
+    .top-banner{
+        display: flex;
+        flex-direction:column-reverse;
+    }
+    .trending-banner {
+        max-width: 300px;
+        margin: 16px auto;
+        width: 100%; 
+    }
+
+    .ads-banner{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .banner-1{
+        width: 100% !important;
+    }
+
+    .sub-banner{
+        display: none;
+    }
+  }

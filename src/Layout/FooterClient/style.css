@@ -18,7 +18,7 @@
 .footer-item-title{
     margin-left: 40px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .footer-item{
@@ -43,4 +43,31 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .footer-list{
+        flex-wrap: wrap;
+    }
+
+    .footer-item{
+        flex: 0 0 auto;
+        width: 50%;
+    }
+  }
+  
+
+/* Điện thoại di động */
+@media (max-width: 767px) {
+    /* CSS dành cho màn hình nhỏ hơn 767px */
+    .footer-list{
+        flex-wrap: wrap;
+    }
+
+    .footer-item{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+  
 }
