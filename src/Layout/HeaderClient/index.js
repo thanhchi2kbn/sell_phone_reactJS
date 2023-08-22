@@ -27,7 +27,7 @@ export default function HeaderClient() {
                 <div className='menu-header'>
                    
                     <ul className={`list-menu-header ${isMenuOpen ? 'open' : ''}`} id='list-menu-header'>
-                        <li><a href='#'><HomeIcon /><p>TRANG CHỦ</p></a></li>
+                        <li><a href='#' onClick={()=>navigate("/")}><HomeIcon /><p>TRANG CHỦ</p></a></li>
                         <li><a href='#'><AppleIcon /><p>SẢN PHẨM</p></a></li>
                         <li><a href='#'><LocalShippingIcon /><p>BẢO HÀNH</p></a></li>
                         <li><a href='#'><LockOpenIcon /><p>UNLOCK IPHONE</p></a></li>

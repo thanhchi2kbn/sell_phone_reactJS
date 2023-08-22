@@ -19,15 +19,16 @@ export default function UserTableRow({ row ,reFetch}) {
     setIsOpenModal(true)
   }
 
-
+  const maskedPassword = `${row.password.slice(0, 3)}${'*'.repeat(row.password.length - 3)}`;
 
   return (
+    
     <TableRow
       key={row.id}
       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
     >
       <TableCell>{row.email}</TableCell>
-      <TableCell>{row.password}</TableCell>
+      <TableCell>{maskedPassword}</TableCell>
       <TableCell align="right">
         <IconButton onClick={handleEditUser}>
           <EditIcon />

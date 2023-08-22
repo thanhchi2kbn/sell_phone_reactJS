@@ -56,6 +56,10 @@
         width: 50%;
     }
   }
+
+  .footer{
+    transform: translateY(25px);
+}
   
 
 /* Điện thoại di động */
@@ -68,6 +72,10 @@
     .footer-item{
         flex: 0 0 auto;
         width: 100%;
+    }
+
+    .footer{
+        transform: translateY(25px);
     }
   
 }

@@ -30,9 +30,11 @@ li {
 
 .main-content{
     width: 70%;
+    flex: 0 0 auto;
 }
 
 .side-bar{
+    flex: 0 0 auto;
     margin-left: 20px;
     width: 30%;;
     border: 1px solid #ccc;
@@ -159,3 +161,59 @@ li {
     width: 50%;
 }
 
+/* ---------------------------------------------------------------------------------- */
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+    /* CSS dành cho màn hình từ 768px đến 1023px */
+    .side-bar{
+        display: none;
+    }
+
+    .main-content{
+        width: 100%;
+        flex: 0 0 auto;
+    }
+  }
+  
+  /* Điện thoại di động */
+  @media (max-width: 767px) {
+    .detail-product-img{
+        margin-left: 40px;
+        max-width: 300px;
+        align-self: center;
+    }
+    
+    .main-content{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .side-bar{
+        display: none;
+    }
+
+    
+    .detail-product{
+        flex-direction: column;
+    }
+
+    .detail-product-img{
+        flex:  0 0 auto;
+        width: 100%;
+    }
+    .detail-info, .promotion, .buy-product{
+        flex:  0 0 auto;
+        width: 100%;
+    }
+
+    .sub-detail{
+        flex-direction: column;
+    }
+    
+    .promotion{
+        max-width: 350px;
+        align-self: center;
+        margin-bottom: 16px;
+        margin-left: 45px
+    }
+    /* CSS dành cho màn hình nhỏ hơn 767px */
+  }

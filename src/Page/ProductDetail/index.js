@@ -114,7 +114,9 @@ export default function ProductDetail() {
                             <p>Loading...</p>
                         )}
                     </div>
-                    <div className='side-bar'>side bar</div>
+
+
+                    <div className='side-bar'>Banner</div>
                 </div>
             </div>
             <FooterClient />

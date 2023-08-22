@@ -16,9 +16,6 @@ const validationSchema = yup.object({
     name: yup
         .string('Enter product name')
         .required('Product name is required'),
-    image: yup
-        .string('Enter your image')
-        .required('Password is required'),
 
     price: yup
         .string('Enter product price')
@@ -29,8 +26,8 @@ const ProductModal = () => {
 
     const { isOpenModal, setIsOpenModal, initDataModal, setInitDataModal, handleSearch }
         = React.useContext(ProductModalContext)
-    const [image, setImage ] = React.useState("")
-    console.log(initDataModal)
+    const [imageB64, setImageB64 ] = React.useState("")
+    // console.log(initDataModal)
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
@@ -39,20 +36,18 @@ const ProductModal = () => {
             image: initDataModal.image ?? "",
             price: initDataModal.price ?? "",
             details: {
-                brand:   "",
-                operatingSystem: "",
-                camera:  "",
-                display:  "",
-                memory:  "",
-                color: "",
+                brand:  initDataModal?.details?.brand ?? "",
+                operatingSystem: initDataModal?.details?.operatingSystem ??"",
+                camera:  initDataModal?.details?.camera ??"",
+                display:  initDataModal?.details?.display ??"",
+                memory: initDataModal?.details?.memory ?? "",
+                color:initDataModal?.details?.color ?? "",
             }
-
-
         },
         validationSchema: validationSchema,
         onSubmit: async (values) => {
            if(values.id){
-            await handleEditProduct({id: values.id,name: values.name, image: defaultImg, price: values.price, 
+            await handleEditProduct({id: values.id,name: values.name, image: imageB64, price: values.price, 
                 details: {
                 brand: values.brand,
                 operatingSystem: values.operatingSystem,
@@ -61,12 +56,12 @@ const ProductModal = () => {
                 memory: values.memory,
                 color: values.color,
             }
-
             })
+
 
            }else{
             await handleCreateProduct({
-                name: values.name, image: defaultImg, price: values.price, details: {
+                name: values.name, image: imageB64, price: values.price, details: {
                     brand: values.brand,
                     operatingSystem: values.operatingSystem,
                     camera: values.camera,
@@ -75,8 +70,13 @@ const ProductModal = () => {
                     color: values.color,
                 }
             })
+
+            
            }
+            await setImageB64("")
+            formik.resetForm()
             await handleSearch()
+
         }
 
     });
@@ -104,7 +104,11 @@ const ProductModal = () => {
     }
 
     const handleFile = (event) => {
-        setImage(event.target.files[0])
+        var reader = new FileReader();
+        reader.onloadend =  function(){
+            setImageB64(reader.result);
+        }
+        reader.readAsDataURL(event.target.files[0])    
     }
     
     return (
@@ -118,20 +122,19 @@ const ProductModal = () => {
                         error={formik.touched.name && Boolean(formik.errors.name)}
                         helperText={formik.touched.name && formik.errors.name}
                     />
-                    <TextField margin="dense" name="image" label="Image" type="text" fullWidth variant="standard" value={formik.values.image}
+                    {/* <TextField margin="dense" name="image" label="Image" type="text" fullWidth variant="standard" value={formik.values.image}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         error={formik.touched.image && Boolean(formik.errors.image)}
-                        helperText={formik.touched.image && formik.errors.image}
-                        
-                    />
+                        helperText={formik.touched.image && formik.errors.image}    
+                    /> */}
                     
-                    {/* {image? (<img src={URL.createObjectURL(image)} style={{width:"100px",height:"100px"}}></img>):(
+                    {imageB64? (<img src={imageB64}  style={{width:"100px",height:"100px"}}></img>):(
                     <Button variant='contained' component="label">
                         Upload File
                         <input type='file' hidden onChange={handleFile}/>
                     </Button>
-                    )} */}
+                    )}
 
                     {/* <InputFileUpload/> */}
                     <p >Product Details:</p>

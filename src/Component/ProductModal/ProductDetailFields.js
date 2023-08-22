@@ -10,8 +10,9 @@ export const productDetailValidationSchema = yup.object({
 });
 
 const ProductDetailFields = (props) => {
+  console.log("AAAA", props.formik);
   const brands = ['Apple', 'Samsung', 'Oppo'];
-  const os = ['IOS', 'Android'];
+  const os = ['iOS', 'Android'];
 
   return (
     <div style={{ marginLeft: "20px" }}>
@@ -22,7 +23,7 @@ const ProductDetailFields = (props) => {
         label="Brand"
         fullWidth
         variant="standard"
-        value={props.formik.values.brand}
+        value={props.formik.values.details.brand }
         onChange={props.formik.handleChange}
         onBlur={props.formik.handleBlur}
         error={props.formik.touched.brand && Boolean(props.formik.errors.brand)}
@@ -42,7 +43,7 @@ const ProductDetailFields = (props) => {
         label="Operating System"
         fullWidth
         variant="standard"
-        value={props.formik.values.operatingSystem}
+        value={props.formik.values.details.operatingSystem}
         onChange={props.formik.handleChange}
         onBlur={props.formik.handleBlur}
         error={props.formik.touched.operatingSystem && Boolean(props.formik.errors.operatingSystem)}
@@ -62,7 +63,7 @@ const ProductDetailFields = (props) => {
         type="text"
         fullWidth
         variant="standard"
-        value={props.formik.values.camera}
+        value={props.formik.values.details.camera}
         onChange={props.formik.handleChange}
         onBlur={props.formik.handleBlur}
         error={props.formik.touched.camera && Boolean(props.formik.errors.camera)}
@@ -76,7 +77,7 @@ const ProductDetailFields = (props) => {
         type="text"
         fullWidth
         variant="standard"
-        value={props.formik.values.display}
+        value={props.formik.values.details.display}
         onChange={props.formik.handleChange}
         onBlur={props.formik.handleBlur}
         error={props.formik.touched.display && Boolean(props.formik.errors.display)}
@@ -90,7 +91,7 @@ const ProductDetailFields = (props) => {
         type="text"
         fullWidth
         variant="standard"
-        value={props.formik.values.memory}
+        value={props.formik.values.details.memory}
         onChange={props.formik.handleChange}
         onBlur={props.formik.handleBlur}
         error={props.formik.touched.memory && Boolean(props.formik.errors.memory)}
@@ -104,7 +105,7 @@ const ProductDetailFields = (props) => {
         type="text"
         fullWidth
         variant="standard"
-        value={props.formik.values.color}
+        value={props.formik.values.details.color}
         onChange={props.formik.handleChange}
         onBlur={props.formik.handleBlur}
         error={props.formik.touched.color && Boolean(props.formik.errors.color)}

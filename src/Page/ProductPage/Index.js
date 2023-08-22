@@ -36,8 +36,8 @@ export default function ProductPage() {
   }, [])
 
   const handleAddBtn = () =>{
-    setInitDataModal({})
     setIsOpenModal(true)
+    setInitDataModal({})
   }
 
   return (

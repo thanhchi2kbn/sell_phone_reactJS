@@ -106,7 +106,7 @@
         flex-direction: column;
         background-color: #fff;
         position: absolute;
-        top: 60px; /* Điều chỉnh vị trí hiển thị menu */
+        top: 50px; /* Điều chỉnh vị trí hiển thị menu */
         right: 0;
         width: 100%;
         padding: 10px;
@@ -160,7 +160,7 @@
         flex-direction: column;
         background-color: #fff;
         position: absolute;
-        top: 60px; /* Điều chỉnh vị trí hiển thị menu */
+        top: 50px; /* Điều chỉnh vị trí hiển thị menu */
         right: 0;
         width: 100%;
         padding: 10px;
