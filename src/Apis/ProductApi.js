@@ -9,6 +9,10 @@ const getAll = (page, config) => {
   return axiosClient.get(`${url}?_start=${offset}&_limit=${PAGE_SIZE}`, config);
 };
 
+const getAllList = (config) => {
+  return axiosClient.get(`${url}`, config);
+};
+
 
 
 const getByID = (id, config) => {
@@ -27,5 +31,5 @@ const deleteByID = (id) => {
   return axiosClient.delete(`${url}/${id}`);
 };
 
-const ProductApi = { getAll, getByID, create, updateByID, deleteByID };
+const ProductApi = { getAll, getByID, create, updateByID, deleteByID,getAllList };
 export default ProductApi;

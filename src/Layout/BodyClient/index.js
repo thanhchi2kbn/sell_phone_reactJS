@@ -9,7 +9,7 @@ export default function BodyClient() {
   const [listProduct, setListProduct] = useState([])
   
   const fetchListProduct = async (config = {}) => {
-    const res = await ProductApi.getAll(config);
+    const res = await ProductApi.getAllList(config);
     setListProduct(res.data)
   }
 
