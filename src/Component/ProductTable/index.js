@@ -30,6 +30,7 @@ export default function ProductTable({data, reFetch}) {
           ))}
         </TableBody>
       </Table>
+      
     </TableContainer>
     </>
   )
