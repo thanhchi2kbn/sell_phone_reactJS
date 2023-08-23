@@ -49,12 +49,12 @@ const ProductModal = () => {
            if(values.id){
             await handleEditProduct({id: values.id,name: values.name, image: imageB64, price: values.price, 
                 details: {
-                brand: values.brand,
-                operatingSystem: values.operatingSystem,
-                camera: values.camera,
-                display: values.display,
-                memory: values.memory,
-                color: values.color,
+                brand: values.details.brand,
+                operatingSystem: values.details.operatingSystem,
+                camera: values.details.camera,
+                display: values.details.display,
+                memory: values.details.memory,
+                color: values.details.color,
             }
             })
 
@@ -62,12 +62,12 @@ const ProductModal = () => {
            }else{
             await handleCreateProduct({
                 name: values.name, image: imageB64, price: values.price, details: {
-                    brand: values.brand,
-                    operatingSystem: values.operatingSystem,
-                    camera: values.camera,
-                    display: values.display,
-                    memory: values.memory,
-                    color: values.color,
+                    brand: values.details.brand,
+                    operatingSystem: values.details.operatingSystem,
+                    camera: values.details.camera,
+                    display: values.details.display,
+                    memory: values.details.memory,
+                    color: values.details.color,
                 }
             })
 

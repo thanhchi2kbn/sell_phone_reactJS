@@ -8,30 +8,40 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import ProductTableRow from '../ProductTableRow';
 import "./style.css"
+import { Pagination, Stack, Typography } from '@mui/material';
+import ProductModalContext from '../../Contexts/ProductModalContext';
 
-export default function ProductTable({data, reFetch}) {
-    
+export default function ProductTable({ data, reFetch }) {
+
+  const { totalPages, currentPage, setCurrentPage }
+    = React.useContext(ProductModalContext)
+
   return (
     <>
-      <TableContainer component={Paper} style={{marginTop: '20px'}}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow className='table-title-product'>
-            <TableCell>Name</TableCell>
-            <TableCell >Image</TableCell>
-            <TableCell >Detail</TableCell>
-            <TableCell >Price</TableCell>
-            <TableCell align="right">Action</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((row) => (
-            <ProductTableRow row={row} key={row.id} reFetch={reFetch}/>
-          ))}
-        </TableBody>
-      </Table>
-      
-    </TableContainer>
+      <TableContainer component={Paper} style={{ marginTop: '20px' }}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow className='table-title-product'>
+              <TableCell>Name</TableCell>
+              <TableCell >Image</TableCell>
+              <TableCell >Detail</TableCell>
+              <TableCell >Price</TableCell>
+              <TableCell align="right">Action</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data.map((row) => (
+              <ProductTableRow row={row} key={row.id} reFetch={reFetch} />
+            ))}
+          </TableBody>
+        </Table>
+
+        <div className='pagination'>
+          <Stack spacing={2}>
+            <Pagination variant="outlined" shape="rounded" count={totalPages} page={currentPage} onChange={(event, page) => setCurrentPage(page)} />
+          </Stack>
+        </div>
+      </TableContainer>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ProductTable from '../../Component/ProductTable'
-import ProductApi from '../../Apis/ProductApi'
+import ProductApi, {PAGE_SIZE} from '../../Apis/ProductApi'
 import { Button, IconButton, InputBase, Paper } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
@@ -12,18 +12,27 @@ export default function ProductPage() {
   const [listProduct, setListProduct] = useState([])
   const [isOpenModal, setIsOpenModal] = useState(false)
   const [initDataModal, setInitDataModal] = useState({})
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   
   const ref = useRef(null)
 
-  
-  const fetchListProduct = async (config = {}) => {
-    const res = await ProductApi.getAll(config);
-    setListProduct(res.data)
-  }
-  useEffect(() => {
-    fetchListProduct()
 
-  }, [])
+  
+  const fetchListProduct = async (page) => {
+    const res = await ProductApi.getAll(page);
+    setListProduct(res.data);
+    
+    // Tính tổng số trang dựa trên số lượng sản phẩm và PAGE_SIZE
+    const totalCount = parseInt(res.headers['x-total-count'], 10);
+    const totalPagesCount = Math.ceil(totalCount / PAGE_SIZE);
+    setTotalPages(totalPagesCount);
+  };
+
+  useEffect(() => {
+    fetchListProduct(currentPage);
+  }, [currentPage]);
 
   const handleSearch = async () => {
     try {
@@ -51,7 +60,7 @@ export default function ProductPage() {
   }
 
   return (
-    <ProductModalContext.Provider value={{isOpenModal,setIsOpenModal,initDataModal,setInitDataModal,handleSearch}}>
+    <ProductModalContext.Provider value={{isOpenModal,setIsOpenModal,initDataModal,setInitDataModal,handleSearch,totalPages,currentPage,setCurrentPage}}>
 
       <ProductModal/>
       <div className='main-content1' >

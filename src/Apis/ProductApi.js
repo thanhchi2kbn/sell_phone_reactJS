@@ -2,9 +2,14 @@ import axiosClient from "./Api";
 
 const url = "/phones";
 
-const getAll = (config) => {
-  return axiosClient.get(url, config);
+export  const  PAGE_SIZE = 5; // Số sản phẩm trên mỗi trang
+
+const getAll = (page, config) => {
+  const offset = (page - 1) * PAGE_SIZE;
+  return axiosClient.get(`${url}?_start=${offset}&_limit=${PAGE_SIZE}`, config);
 };
+
+
 
 const getByID = (id, config) => {
   return axiosClient.get(`${url}/${id}`, config);
