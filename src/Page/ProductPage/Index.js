@@ -12,19 +12,9 @@ export default function ProductPage() {
   const [listProduct, setListProduct] = useState([])
   const [isOpenModal, setIsOpenModal] = useState(false)
   const [initDataModal, setInitDataModal] = useState({})
+  
   const ref = useRef(null)
-  const handleSearch = React.useCallback(() => {
-    const text = ref.current.value?.trim().toLowerCase(); // Chuyển thành chữ thường
-    fetchListProduct(
-      ...(text && [
-        {
-          params: {
-            name: text,
-          },
-        },
-      ])
-    );
-  }, [ref]);
+
   
   const fetchListProduct = async (config = {}) => {
     const res = await ProductApi.getAll(config);
@@ -34,6 +24,26 @@ export default function ProductPage() {
     fetchListProduct()
 
   }, [])
+
+  const handleSearch = async () => {
+    try {
+      const searchTerm = ref.current.value.trim(); // Lấy và loại bỏ khoảng trắng của giá trị từ input search
+      if (!searchTerm) {
+        // Nếu giá trị search rỗng, fetch tất cả sản phẩm
+        await fetchListProduct();
+      } else {
+        // Nếu có giá trị search, gọi API để lấy danh sách sản phẩm tương ứng
+        const res = await ProductApi.getAll(); // Lấy danh sách tất cả sản phẩm 
+        const filteredProducts = res.data.filter(product =>
+          product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setListProduct(filteredProducts);
+      }
+    } catch (error) {
+      console.error("Error searching products:", error);
+    }
+  };
+  
 
   const handleAddBtn = () =>{
     setIsOpenModal(true)

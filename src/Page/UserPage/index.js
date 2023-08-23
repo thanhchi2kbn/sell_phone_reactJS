@@ -12,18 +12,21 @@ export default function UserPage() {
   const [isOpenModal, setIsOpenModal] = useState(false)
   const [initDataModal, setInitDataModal] = useState({})
   const ref = useRef(null)
-  const handleSearch = React.useCallback(() => {
+
+  const handleSearch = () => {
     const text = ref.current.value?.trim().toLowerCase(); // Chuyển thành chữ thường
-    fetchListUser(
-      ...(text && [
-        {
-          params: {
-            email: text,
-          },
+    if (text === "") {
+      // Nếu text là rỗng, load lại danh sách user đầy đủ
+      fetchListUser();
+    } else {
+      // Nếu có text, tìm kiếm theo tên user
+      fetchListUser({
+        params: {
+          email: text,
         },
-      ])
-    );
-  }, [ref]);
+      });
+    }
+  };
   
   const fetchListUser = async (config = {}) => {
     const res = await UserApi.getAll(config);
