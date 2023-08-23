@@ -19,7 +19,7 @@ const ProductDetailFields = (props) => {
       <TextField
         select
         margin="dense"
-        name="brand"
+        name="details.brand"
         label="Brand"
         fullWidth
         variant="standard"
@@ -39,7 +39,7 @@ const ProductDetailFields = (props) => {
       <TextField
         select
         margin="dense"
-        name="operatingSystem"
+        name="details.operatingSystem"
         label="Operating System"
         fullWidth
         variant="standard"
@@ -58,7 +58,7 @@ const ProductDetailFields = (props) => {
       
       <TextField
         margin="dense"
-        name="camera"
+        name="details.camera"
         label="Camera"
         type="text"
         fullWidth
@@ -72,7 +72,7 @@ const ProductDetailFields = (props) => {
       
       <TextField
         margin="dense"
-        name="display"
+        name="details.display"
         label="Display"
         type="text"
         fullWidth
@@ -86,7 +86,7 @@ const ProductDetailFields = (props) => {
       
       <TextField
         margin="dense"
-        name="memory"
+        name="details.memory"
         label="Memory"
         type="text"
         fullWidth
@@ -100,7 +100,7 @@ const ProductDetailFields = (props) => {
       
       <TextField
         margin="dense"
-        name="color"
+        name="details.color"
         label="Color"
         type="text"
         fullWidth
