@@ -7,3 +7,9 @@
     justify-content: center;
     margin: 16px 0;
 }
+
+.sort-field:hover{
+    cursor: pointer;
+    color: red;
+}
+

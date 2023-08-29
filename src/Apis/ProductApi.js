@@ -4,9 +4,15 @@ const url = "/phones";
 
 export  const  PAGE_SIZE = 5; // Số sản phẩm trên mỗi trang
 
-const getAll = (page, config) => {
-  const offset = (page - 1) * PAGE_SIZE;
-  return axiosClient.get(`${url}?_start=${offset}&_limit=${PAGE_SIZE}`, config);
+const getPaging = (limit, page, ...rest ) => {
+  const nameFilter = rest[0]
+  return axiosClient.get("/phones",{
+    params: {
+      _limit: limit,
+      _page: page,
+      ...nameFilter
+    }
+  });
 };
 
 const getAllList = (config) => {
@@ -31,5 +37,5 @@ const deleteByID = (id) => {
   return axiosClient.delete(`${url}/${id}`);
 };
 
-const ProductApi = { getAll, getByID, create, updateByID, deleteByID,getAllList };
+const ProductApi = { getPaging, getByID, create, updateByID, deleteByID,getAllList };
 export default ProductApi;

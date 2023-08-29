@@ -24,7 +24,7 @@ const validationSchema = yup.object({
 
 const ProductModal = () => {
 
-    const { isOpenModal, setIsOpenModal, initDataModal, setInitDataModal, handleSearch }
+    const { refetch, isOpenModal, setIsOpenModal, initDataModal, pagingData, setPagingData }
         = React.useContext(ProductModalContext)
     const [imageB64, setImageB64 ] = React.useState("")
     // console.log(initDataModal)
@@ -47,7 +47,7 @@ const ProductModal = () => {
         validationSchema: validationSchema,
         onSubmit: async (values) => {
            if(values.id){
-            await handleEditProduct({id: values.id,name: values.name, image: imageB64, price: values.price, 
+            await handleEditProduct({id: values.id,name: values.name, image: imageB64?imageB64:initDataModal.image , price: values.price, 
                 details: {
                 brand: values.details.brand,
                 operatingSystem: values.details.operatingSystem,
@@ -61,7 +61,7 @@ const ProductModal = () => {
 
            }else{
             await handleCreateProduct({
-                name: values.name, image: imageB64, price: values.price, details: {
+                name: values.name, image: imageB64?imageB64:defaultImg, price: values.price, details: {
                     brand: values.details.brand,
                     operatingSystem: values.details.operatingSystem,
                     camera: values.details.camera,
@@ -75,7 +75,16 @@ const ProductModal = () => {
            }
             await setImageB64("")
             formik.resetForm()
-            await handleSearch()
+
+            if(pagingData.currentPage === 0 || values.id){
+                refetch();
+            }
+            else{
+            setPagingData({
+                ...pagingData,
+                currentPage: 1
+            })
+            }
 
         }
 
@@ -103,6 +112,7 @@ const ProductModal = () => {
         })
     }
 
+   
     const handleFile = (event) => {
         var reader = new FileReader();
         reader.onloadend =  function(){
@@ -122,12 +132,6 @@ const ProductModal = () => {
                         error={formik.touched.name && Boolean(formik.errors.name)}
                         helperText={formik.touched.name && formik.errors.name}
                     />
-                    {/* <TextField margin="dense" name="image" label="Image" type="text" fullWidth variant="standard" value={formik.values.image}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        error={formik.touched.image && Boolean(formik.errors.image)}
-                        helperText={formik.touched.image && formik.errors.image}    
-                    /> */}
                     
                     {imageB64? (<img src={imageB64}  style={{width:"100px",height:"100px"}}></img>):(
                     <Button variant='contained' component="label">
