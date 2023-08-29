@@ -8,6 +8,8 @@ import RadioBtn from '../../Layout/RadioBtn'
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import { Button } from '@mui/material'
 import ProductApi from '../../Apis/ProductApi'
+import EastIcon from '@mui/icons-material/East';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function ProductDetail() {
     const [product, setProduct] = useState(null);
@@ -116,7 +118,34 @@ export default function ProductDetail() {
                     </div>
 
 
-                    <div className='side-bar'>Banner</div>
+                    <div className='side-bar'>
+
+                                        <div className='header-promotion'>
+                                            <p><CardGiftcardIcon /></p>
+                                            <p>  Khuyến mãi đặc biệt</p>
+                                        </div>
+                                        <div className='banner'>
+                                            <ul>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> 30 ngày 1 đổi 1 tất cả các lỗi do nhà sản xuất</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Dùng thử 7 ngày không thích hoàn tiền 100%</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> 30 ngày sử dụng lên đời sản phẩm khác chỉ thêm tiền chênh lệcht</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Bảo hành 3 tháng phần cứng</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Bảo hành phần mềm trọn đời máy</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Hết bảo hành hỗ trợ 100% công sửa chữa</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Cam kết bảo hành nhanh nhất tốt nhất.</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Trả góp 0% với thẻ tín dụng.</li>
+                                                <li><HomeIcon style={{fontSize: "13px", color:"red"}}/> Địa chỉ cửa hàng</li>
+                                                <li><HomeIcon style={{fontSize: "13px", color:"red"}}/> Số 5 ngõ 88 Trần Quý Cáp, Đống Đa, Hà Nội</li>
+                                                <li><HomeIcon style={{fontSize: "13px", color:"red"}}/> Số 48 Ngõ 18 Huỳnh Thúc Kháng, Đống Đa, Hà Nội </li>
+                                                <li><HomeIcon style={{fontSize: "13px", color:"red"}}/> Khách đặt ship COD: <span style={{color: "red"}}>037.370.9999</span> </li>
+                                            </ul>
+
+                                            <img src='https://mobilelegend.vn/wp-content/uploads/2021/08/228133317_336649978184865_4537962470115148577_n.jpg'></img>
+                                            <img src='https://dongshopsun.vn/wp-content/uploads/2022/09/mua-tra-truoc-dien-thoai-lai-suat-0-dong.jpg'></img>
+                                        
+                                        </div>
+                                    </div>
+
                 </div>
             </div>
             <FooterClient />

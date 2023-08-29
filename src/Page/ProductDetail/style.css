@@ -33,14 +33,7 @@ li {
     flex: 0 0 auto;
 }
 
-.side-bar{
-    flex: 0 0 auto;
-    margin-left: 20px;
-    width: 30%;;
-    border: 1px solid #ccc;
-    font-size: 40px;
-    text-align: center;
-}
+
 
 .detail-product-img{
     text-align: center;
@@ -161,6 +154,33 @@ li {
     width: 50%;
 }
 
+.side-bar{
+    flex: 0 0 auto;
+    margin-left: 20px;
+    width: 30%;;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 13px;
+
+}
+
+.side-bar ul{
+   padding-left: 0;
+
+}
+
+.side-bar ul li{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px;
+ 
+ }
+
+ .banner img{
+    width: 100%;
+ }
+
 /* ---------------------------------------------------------------------------------- */
 /* Tablet */
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -190,6 +210,8 @@ li {
     .side-bar{
         display: none;
     }
+
+    
 
     
     .detail-product{
