@@ -71,6 +71,20 @@
     font-size: 24px;
     cursor: pointer;
   }
+
+  .cart-item-count{
+    margin-left: 6px ;
+    font-size: 11px;
+    padding: 2px 4px;
+    color: #DB2525;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  .d-none{
+    display: none;
+  }
   
   /* Media queries cho tablet */
   @media (max-width: 1023px) and (min-width: 768px) {

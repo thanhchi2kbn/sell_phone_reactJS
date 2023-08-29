@@ -44,3 +44,29 @@ export function loginAction(email, password) {
       
     }
   }
+
+  export function addCard(product) {
+    return (dispatch) => {
+        if (product) {
+            const productId = product.id; // Giả sử ID của sản phẩm nằm trong thuộc tính "id"
+            const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            if (!currentCart.includes(productId)) {
+                currentCart.push(productId);
+                localStorage.setItem('cart', JSON.stringify(currentCart));
+
+                dispatch(showNotification({
+                    content: 'Sản phẩm đã được thêm vào giỏ hàng.',
+                    typeToast: 'success',
+                }));
+            } else {
+                dispatch(showNotification({
+                    content: 'Sản phẩm đã có trong giỏ hàng.',
+                    typeToast: 'error',
+                }));
+            }
+        }
+    }
+}
+
+  

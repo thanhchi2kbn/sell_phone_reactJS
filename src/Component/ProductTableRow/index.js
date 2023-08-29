@@ -6,13 +6,16 @@ import React from 'react'
 import ProductApi from '../../Apis/ProductApi';
 import './style.css'
 import ProductModalContext from '../../Contexts/ProductModalContext';
-export default function ProductTableRow({ row ,reFetch}) {
-  const { isOpenModal, setIsOpenModal, initDataModal, setInitDataModal, handleSearch }
+export default function ProductTableRow({ row }) {
+  const { isOpenModal, setIsOpenModal, setInitDataModal,pagingData, setPagingData  }
   = React.useContext(ProductModalContext)
 
   const handleDeleteProduct = async () => {
     await ProductApi.deleteByID(row.id);
-    reFetch();
+    setPagingData({
+      ...pagingData,
+      currentPage: 1,
+    })
   }
 
   const handleEditProduct = () =>{

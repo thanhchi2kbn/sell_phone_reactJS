@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import AppleIcon from '@mui/icons-material/Apple';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -15,11 +15,19 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function HeaderClient() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
 
     const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
     };
     const navigate = useNavigate()
+    const [cartItems, setCartItems] = useState([]);
+
+    useEffect(() => {
+        // Lấy số lượng sản phẩm từ localStorage
+        const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        setCartItems(storedCartItems);
+    }, []);
     return (
         <>
             <header>
@@ -37,9 +45,10 @@ export default function HeaderClient() {
                 <div className='action-header'>
                     <div className='search-btn'><SearchIcon /></div>
                     <div className='shoping-card'>
-                        <Button color="error" style={{ color: "#fff" }}>
+                        <Button onClick={()=>navigate("/cart")} color="error" style={{ color: "#fff" }}>
                             <ShoppingCartIcon />
-                            <p>Giỏ Hàng</p>
+                            <p>Giỏ Hàng <span className={cartItems.length? "cart-item-count" : "cart-item-count d-none" }>{cartItems.length}</span> </p>
+                            
                         </Button>
                     </div>
                     <div className='sign-in-btn'>

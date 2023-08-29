@@ -10,9 +10,14 @@ import { Button } from '@mui/material'
 import ProductApi from '../../Apis/ProductApi'
 import EastIcon from '@mui/icons-material/East';
 import HomeIcon from '@mui/icons-material/Home';
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addCard } from '../../Store/Actions/NotificationActions'
+import ToastMessage from '../../Component/ToastMessage'
 
 export default function ProductDetail() {
     const [product, setProduct] = useState(null);
+    const dispatch = useDispatch()
 
     useEffect(() => {
         // Gọi API để lấy thông tin sản phẩm theo ID
@@ -29,7 +34,7 @@ export default function ProductDetail() {
         fetchProduct();
     }, []);
 
-    
+
     const priceFormatted = (price) => {
         return new Intl.NumberFormat('vi-VN', {
             style: 'currency',
@@ -37,9 +42,16 @@ export default function ProductDetail() {
         }).format(price);
     };
 
+    const handleBuyClick = () => {
+        if (product) {
+            console.log(product);
+            dispatch(addCard(product)); // Gọi hàm addCard và truyền thông tin sản phẩm
+        }
+    };
     return (
         <div className='home-page detail-page'>
             <HeaderClient />
+            <ToastMessage/>; 
 
             <div className='container'>
                 <div className='wrapper'>
@@ -86,8 +98,8 @@ export default function ProductDetail() {
                                     <div className='buy-product'>
                                         <div style={{ display: "flex", gap: "16px", marginBottom: "12px" }}>
                                             <div className='detail-price'>{priceFormatted(product.price)}</div>
-                                            <Button variant="contained" color="error">
-                                                Mua Hàng
+                                            <Button onClick={handleBuyClick} variant="contained" color="error">
+                                                Thêm vào giỏ
                                             </Button>
                                         </div>
                                         <div className='pay-now'>
@@ -122,17 +134,15 @@ export default function ProductDetail() {
 
                                         <div className='header-promotion'>
                                             <p><CardGiftcardIcon /></p>
-                                            <p>  Khuyến mãi đặc biệt</p>
+                                            <p>Chính sách bảo hành</p>
                                         </div>
                                         <div className='banner'>
                                             <ul>
                                                 <li><EastIcon style={{fontSize: "13px", color:"red"}}/> 30 ngày 1 đổi 1 tất cả các lỗi do nhà sản xuất</li>
                                                 <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Dùng thử 7 ngày không thích hoàn tiền 100%</li>
-                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> 30 ngày sử dụng lên đời sản phẩm khác chỉ thêm tiền chênh lệcht</li>
-                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Bảo hành 3 tháng phần cứng</li>
+                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> 30 ngày sử dụng lên đời sản phẩm khác miễn phí</li>
                                                 <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Bảo hành phần mềm trọn đời máy</li>
                                                 <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Hết bảo hành hỗ trợ 100% công sửa chữa</li>
-                                                <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Cam kết bảo hành nhanh nhất tốt nhất.</li>
                                                 <li><EastIcon style={{fontSize: "13px", color:"red"}}/> Trả góp 0% với thẻ tín dụng.</li>
                                                 <li><HomeIcon style={{fontSize: "13px", color:"red"}}/> Địa chỉ cửa hàng</li>
                                                 <li><HomeIcon style={{fontSize: "13px", color:"red"}}/> Số 5 ngõ 88 Trần Quý Cáp, Đống Đa, Hà Nội</li>
@@ -141,7 +151,7 @@ export default function ProductDetail() {
                                             </ul>
 
                                             <img src='https://mobilelegend.vn/wp-content/uploads/2021/08/228133317_336649978184865_4537962470115148577_n.jpg'></img>
-                                            <img src='https://dongshopsun.vn/wp-content/uploads/2022/09/mua-tra-truoc-dien-thoai-lai-suat-0-dong.jpg'></img>
+                                            <img style={{height: "210px"}} src='https://dongshopsun.vn/wp-content/uploads/2022/09/mua-tra-truoc-dien-thoai-lai-suat-0-dong.jpg'></img>
                                         
                                         </div>
                                     </div>

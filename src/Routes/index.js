@@ -9,6 +9,7 @@ import Home from "../Page/HomePage";
 import PrivateComponent from "../Component/PrivateComponent";
 import UserPage from "../Page/UserPage";
 import ProductDetail from "../Page/ProductDetail";
+import CartPage from "../Page/CartPage";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />,
+    },
+
+    {
+        path: "/cart",
+        element: <CartPage />,
     },
 ]);
 
