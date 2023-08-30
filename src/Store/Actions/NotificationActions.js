@@ -49,10 +49,18 @@ export function loginAction(email, password) {
     return (dispatch) => {
         if (product) {
             const productId = product.id; // Giả sử ID của sản phẩm nằm trong thuộc tính "id"
+            const productImg = product.image;
+            const productPrice = product.price;
+            const productName = product.name;
             const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
             
             if (!currentCart.includes(productId)) {
-                currentCart.push(productId);
+                currentCart.push({
+                  productId,
+                  productImg,
+                  productPrice,
+                  productName
+                });
                 localStorage.setItem('cart', JSON.stringify(currentCart));
 
                 dispatch(showNotification({

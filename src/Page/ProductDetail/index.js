@@ -34,6 +34,11 @@ export default function ProductDetail() {
         fetchProduct();
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
+
 
     const priceFormatted = (price) => {
         return new Intl.NumberFormat('vi-VN', {

@@ -40,26 +40,6 @@ export default function SignInSide() {
     onSubmit: async (values) => {
       try {
         dispatch(loginAction(values.email,values.password))
-        // const response = await axiosClient.get("/users", {
-        //   params: {
-        //     email: values.email,
-        //     password: values.password,
-        //   },
-        // });
-
-        // if (response.data.length) {
-        //   dispatch(showNotification({
-        //     content: 'Đăng nhập thành công',
-        //     typeToast: 'success',
-        //   }));
-        //   localStorage.setItem("token", "token123");
-        //   navigate("/admin/product");
-        // } else {
-        //   dispatch(showNotification({
-        //     content: 'Đăng nhập thất bại',
-        //     typeToast: 'error',
-        //   }));
-        // }
       } catch (error) {
         console.error(error);
       }

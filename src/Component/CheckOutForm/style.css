@@ -1,0 +1,20 @@
+.error-message {
+    color: red;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .checkout-form{
+        transform: scale(0.95);
+    }
+
+
+}
+
+@media (max-width: 767px){
+    .checkout-form{
+        transform: scale(0.9);
+    }
+}
+  

@@ -9,7 +9,7 @@ const ToastMessage = () => {
     //cach 2: su dung react redux
     const notiStore = useSelector((store) => store.notification)
     const dispatch = useDispatch()
-    console.log(notiStore);
+
 
     // cach1: su dung redux core
     // const [notiStore, setNotiStore] = useState(store.getState().notification)

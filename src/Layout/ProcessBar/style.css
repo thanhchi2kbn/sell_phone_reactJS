@@ -1,0 +1,71 @@
+.check-out-list{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+
+}
+
+.check-out-item{
+    flex: 1;
+}
+
+.check-out-name p{
+    font-size: 22px ;
+    font-weight: 500;
+    text-align: center;
+}
+
+.check-out-counter{
+    max-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #b4b5bb;
+    color: aliceblue;
+    flex: 1;
+}
+
+.check-out-line{
+    max-width: 230px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: #b4b5bb;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.check-out-step{
+    display: flex;
+    align-items: center;
+}
+
+.active{
+    background-color: #e1474d !important;
+    color: aliceblue;
+}
+
+/* ----------------------------------- */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .check-out-line{
+        max-width: 195px;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .check-out-line{
+        max-width: 60px;
+    }
+
+    .check-out-name p{
+        transform: scale(0.9);
+        min-height: 60px;
+    }
+
+}
+  

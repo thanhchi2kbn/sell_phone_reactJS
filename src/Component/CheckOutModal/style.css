@@ -1,0 +1,42 @@
+.checkout-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-modal-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-done{
+    float: right;
+}
+
+/* css tablet */
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .checkout-modal{
+        width: 70%;
+    }
+
+}
+
+/* css mobile */
+@media (max-width: 767px) {
+    .checkout-modal{
+        width: 80%;
+    }
+
+
+
+}
+ 
