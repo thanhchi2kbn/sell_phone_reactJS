@@ -29,7 +29,7 @@ export default function CheckoutModal({ isOpen, onClose, userInfo, cartItems, to
                         ))}
                     </ul>
 
-                    <h2>Thông tin đơn hàng</h2>
+                    <h2>Tổng hoá đơn:</h2>
                     <p className='text-red'>Tổng cộng giỏ hàng: {formatPrice(totalPrice)}</p>
 
                     <Button onClick={onClose} className='btn-done' variant="contained" color="success" >

@@ -59,12 +59,16 @@
 
 @media (max-width: 767px) {
     .check-out-line{
-        max-width: 60px;
+        max-width: 200px;
     }
 
     .check-out-name p{
         transform: scale(0.9);
         min-height: 60px;
+    }
+
+    .check-out-counter{
+        margin-left: 10px;
     }
 
 }

@@ -63,7 +63,6 @@ export default function CartPage() {
         setShowModal(false);
     };
 
-    console.log(step);
 
 
     return (

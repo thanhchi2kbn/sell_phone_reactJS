@@ -53,8 +53,10 @@ export function loginAction(email, password) {
             const productPrice = product.price;
             const productName = product.name;
             const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+
             
-            if (!currentCart.includes(productId)) {
+            
+            if (!currentCart.some(obj => obj.productId === productId)) {
                 currentCart.push({
                   productId,
                   productImg,
