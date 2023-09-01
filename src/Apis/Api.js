@@ -6,7 +6,9 @@ const axiosClient = axios.create({
   }
 })
 
-//interceptort của request chạy trươc khi reques nó gửi đi nó sẽ chèn thêm
+
+
+// interceptort của request chạy trươc khi reques nó gửi đi nó sẽ chèn thêm
 // những cái dưới
 // axiosClient.interceptors.request.use(
 //   function (config){
@@ -21,8 +23,9 @@ const axiosClient = axios.create({
 //   }
 // );
 
-// //interceptort của response trước khi nó nhận về thì nó cũng chèn thêm
-// // những cái dưới
+//interceptort của response trước khi nó nhận về thì nó cũng chèn thêm
+// những cái dưới
+
 // axiosClient.interceptors.response.use(
 //   function (response){
 //     response.checked =true ;

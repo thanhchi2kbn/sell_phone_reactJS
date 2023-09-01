@@ -25,12 +25,12 @@ export default function FooterClient() {
               <ul>
                 <li>
                   <p>Cở sở 1</p>
-                  <p>Số 5( đối diện số 52 ) ngõ 88 Trần Quý Cáp – Đống Đa – Hà Nội - 091.1900.888</p>
+                  <p> CS Lê Thanh Nghị : T7, 19 Lê Thanh Nghị, Hai Bà Trưng, Hà Nội - 0865.359.388</p>
                 </li>
 
                 <li>
                   <p>Cở sở 2</p>
-                  <p>Số 48 Ngõ 18 Huỳnh Thúc Kháng – Đống Đa – Hà Nội - 08337.55555</p>
+                  <p>CS Duy Tân : T6, Toà nhà AC, 78 Duy Tân, Cầu Giấy, Hà Nội - 0866.805.563</p>
                 </li>
               </ul>
             </div>

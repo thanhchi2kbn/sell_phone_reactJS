@@ -20,6 +20,10 @@
  
 }
 
+.product-item:hover .product-item-img{
+    transform: scale(1.05);
+}
+
 .product-item a{
     color: #5e5e5e;
 }

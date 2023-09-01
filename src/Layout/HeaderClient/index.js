@@ -31,7 +31,7 @@ export default function HeaderClient() {
     return (
         <>
             <header>
-                <div className='icon-header'><img src='https://mobilelegend.vn/wp-content/uploads/2021/12/logo2022-1.png'></img></div>
+                <div className='icon-header'><img src='https://vti.com.vn/wp-content/uploads/2021/06/logo_vti_light.svg'></img><span>Mobile</span></div>
                 <div className='menu-header'>
                    
                     <ul className={`list-menu-header ${isMenuOpen ? 'open' : ''}`} id='list-menu-header'>

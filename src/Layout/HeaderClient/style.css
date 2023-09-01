@@ -13,6 +13,18 @@
     z-index: 10;
   }
   
+  .icon-header{
+    display: flex;
+    align-items: center;
+    gap: 10px
+  }
+
+  .icon-header span{
+    font-size: 32px;
+    font-weight: 700;
+    transform: translateY(2px);
+    letter-spacing: -0.3px;
+  }
 
   .menu-header a {
     display: flex;
@@ -49,6 +61,22 @@
     justify-content: center;
     align-items: center;
   }
+
+  .search-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .shoping-card:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .sign-in-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
   
 
   .action-header .search-btn {
