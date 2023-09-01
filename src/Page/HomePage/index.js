@@ -9,6 +9,10 @@ import BodyClient from '../../Layout/BodyClient'
 export default function Home() {
   return (
     <>
+      <div className='hot-line'>
+      
+
+      </div>
       <div className='home-page'>
         <HeaderClient />
 

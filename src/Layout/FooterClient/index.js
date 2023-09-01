@@ -122,7 +122,7 @@ export default function FooterClient() {
             </div>
           </div>
           
-          <p style={{textAlign: "center", fontSize: "13px"}}>Hộ Kinh Doanh Mobile Legend. GPĐKKD : 01E8035340 do TC-KH, UBND quận Đống Đa cấp ngày: 1/4/2021. Địa chỉ: Số 5 ngõ 88 Trần Quý Cáp, Văn Chương, Đống Đa, Hà Nội. Điện Thoại: 0394555777</p>
+          <p style={{textAlign: "center", fontSize: "13px"}}>&copy; 2023 - Hồ Chí Thành - 176/211 Khương Trung, Thanh Xuân, Hà Nội - 0974514788 - Chithanhtlu@gmail.com</p>
     </div>
   )
 }

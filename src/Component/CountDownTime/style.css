@@ -1,0 +1,57 @@
+.d-flex{
+    display: flex;
+    margin-right: 10px;
+}
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font: normal 1.48em/29px "Lato";
+    font-weight: 700;
+    color: #de4848;
+  }
+  
+.countdown-timer span{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font: normal 12px "Lato";
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+  .digit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 5px 0 0;
+    height: 28px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+
+  }
+  
+  .colon {
+    font-size: 36px;
+    margin: 0 5px;
+  }
+  .animate {
+    animation: bounce 1.05s infinite;
+
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  

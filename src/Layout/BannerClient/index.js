@@ -8,6 +8,7 @@ import ap3 from "../../Assets/image/airpod3.jpg"
 import ap4 from "../../Assets/image/airpods_pro.jpeg"
 import ip13 from "../../Assets/image/iphone-13.jpeg"
 import ip11pr from "../../Assets/image/iphone-11prm.png"
+import CountdownTimer from '../../Component/CountDownTime'
 
 
 export default function BannerClient() {
@@ -86,6 +87,7 @@ export default function BannerClient() {
                         <div className='sub-banner' >
                             <img className='banner-2' src={banner2}></img>
                             <img className='banner-3' src={banner3}></img>
+                            
                         </div>
                     </div>
                 </div>
@@ -94,6 +96,9 @@ export default function BannerClient() {
                 <div className='flash-sale-banner'>
                     <div className='flash-sale-title'>
                         <img src={flashSale}></img>
+                        
+                        <CountdownTimer/>
+                        
                     </div>
 
                     <div className='flash-sale-list'>
