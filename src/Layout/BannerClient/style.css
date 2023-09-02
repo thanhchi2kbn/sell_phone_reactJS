@@ -299,4 +299,12 @@
         justify-content: center;
         align-items: center;
     }
+
+    .flash-sale-title img{
+        margin: 0 10px 10px;
+    }
+
+    .ads-banner .banner-1{
+        animation: fade-to-right 1.2s linear 1;
+    }
   }

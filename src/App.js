@@ -1,8 +1,8 @@
 import './App.css';
-import AdminLayout from './Layout/AdminLayout';
 import ToastMessage from './Component/ToastMessage';
 import { RouterProvider } from 'react-router-dom';
 import router from './Routes';
+
 
 function App() {
  
@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <RouterProvider router={router} />
       <ToastMessage/>; 
+ 
         {/* <AdminLayout>
         </AdminLayout> */}
     </div>

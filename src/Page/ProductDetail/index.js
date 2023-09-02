@@ -10,10 +10,10 @@ import { Button } from '@mui/material'
 import ProductApi from '../../Apis/ProductApi'
 import EastIcon from '@mui/icons-material/East';
 import HomeIcon from '@mui/icons-material/Home';
-import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addCard } from '../../Store/Actions/NotificationActions'
 import ToastMessage from '../../Component/ToastMessage'
+import HotLine from '../../Layout/HotLine'
 
 export default function ProductDetail() {
     const [product, setProduct] = useState(null);
@@ -57,6 +57,7 @@ export default function ProductDetail() {
         <div className='home-page detail-page'>
             <HeaderClient />
             <ToastMessage/>; 
+            <HotLine/>
 
             <div className='container'>
                 <div className='wrapper'>
@@ -65,7 +66,7 @@ export default function ProductDetail() {
                             <>
                                 <div className='detail-product'>
                                     <div className='detail-product-img'>
-                                        <img src={product.image}></img>
+                                        <img src={product.image} alt='img-error'></img>
                                     </div>
                                     <div className='detail-info'>
                                         <h1>{product.name}</h1>
@@ -155,8 +156,8 @@ export default function ProductDetail() {
                                                 <li><HomeIcon style={{fontSize: "13px", color:"red"}}/> Khách đặt ship COD: <span style={{color: "red"}}>037.370.9999</span> </li>
                                             </ul>
 
-                                            <img src='https://mobilelegend.vn/wp-content/uploads/2021/08/228133317_336649978184865_4537962470115148577_n.jpg'></img>
-                                            <img style={{height: "210px"}} src='https://dongshopsun.vn/wp-content/uploads/2022/09/mua-tra-truoc-dien-thoai-lai-suat-0-dong.jpg'></img>
+                                            <img alt='img-error' src='https://mobilelegend.vn/wp-content/uploads/2021/08/228133317_336649978184865_4537962470115148577_n.jpg'></img>
+                                            <img alt='img-error' style={{height: "210px"}} src='https://dongshopsun.vn/wp-content/uploads/2022/09/mua-tra-truoc-dien-thoai-lai-suat-0-dong.jpg'></img>
                                         
                                         </div>
                                     </div>

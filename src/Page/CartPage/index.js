@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Stepper, Step, StepLabel, StepConnector, StepIconProps, Button } from '@mui/material';
+import { Button } from '@mui/material';
 import HeaderClient from '../../Layout/HeaderClient';
 import FooterClient from '../../Layout/FooterClient';
-import ProductApi from '../../Apis/ProductApi';
 import "./style.css";
 import ProcessBar from '../../Layout/ProcessBar';
 import CloseIcon from '@mui/icons-material/Close';
 import CheckoutForm from '../../Component/CheckOutForm';
 import CheckoutModal from '../../Component/CheckOutModal';
+import HotLine from '../../Layout/HotLine'
 
 
 
@@ -23,13 +23,11 @@ export default function CartPage() {
         phoneNumber: '',
     });
 
-    console.log(userInfo);
-
-
     const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
     useEffect(() => {
         setProducts(storedCartItems);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleRemoveProduct = (productId) => {
@@ -68,7 +66,7 @@ export default function CartPage() {
     return (
         <div className='cart-page home-page'>
             <HeaderClient />
-
+            <HotLine/>
             <div className='cart-page-mainContent'>
                 <div className='check-out' >
                     <ProcessBar step={step} />

@@ -1,4 +1,4 @@
-import { TableCell, TableRow } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TableCell, TableRow } from '@mui/material'
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
@@ -7,22 +7,34 @@ import ProductApi from '../../Apis/ProductApi';
 import './style.css'
 import ProductModalContext from '../../Contexts/ProductModalContext';
 export default function ProductTableRow({ row }) {
-  const { isOpenModal, setIsOpenModal, setInitDataModal,pagingData, setPagingData  }
+  const { setIsOpenModal, setInitDataModal,pagingData, setPagingData  }
   = React.useContext(ProductModalContext)
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = React.useState(false);
 
-  const handleDeleteProduct = async () => {
+  const handleOpenDeleteModal = () => {
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+  };
+
+
+   const handleDeleteProduct = async () => {
     await ProductApi.deleteByID(row.id);
     setPagingData({
       ...pagingData,
       currentPage: 1,
-    })
-  }
+    });
+    handleCloseDeleteModal(); // Đóng modal sau khi xóa
+  };
 
   const handleEditProduct = () =>{
     setInitDataModal(row)
     setIsOpenModal(true)
   }
   
+
   // Destructuring to access details properties
   const { brand, operatingSystem, camera, display, memory, color } = row.details;
 
@@ -51,10 +63,34 @@ export default function ProductTableRow({ row }) {
           <EditIcon />
         </IconButton>
 
-        <IconButton onClick={() => { handleDeleteProduct(row.id) }}>
+        <IconButton onClick={handleOpenDeleteModal}>
           <DeleteIcon />
         </IconButton>
       </TableCell>
+
+    {/* Modal xác nhận xóa */}
+    <Dialog style={{padding:"10px"}}
+        open={isDeleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">Confirm Delete</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Are you sure you want to delete this product?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDeleteModal} color="primary">
+            Cancel
+          </Button>
+          <Button variant="contained"  onClick={() =>handleDeleteProduct(row.id)} color="primary" autoFocus>
+            Confirm
+          </Button>
+        </DialogActions>
+      </Dialog>
+
     </TableRow>
   )
 }
