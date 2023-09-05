@@ -34,6 +34,44 @@
     
 }
 
+/*  */
+.product-item {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  
+  .product-item-stars {
+    color: gold;
+    font-size: 20px;
+  }
+  
+  .product-item-discount {
+    margin-top: 2px;
+    padding: 1px 10px 5px 10px;
+    background-color: #fff86e;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: -6px;
+    box-shadow: rgb(60 64 67 / 10%) 0px 1px 0px 0px, rgb(60 64 67 / 15%) 0px 2px 3px 2px;
+    color: #000;
+  }
+  
+
 
   
 
