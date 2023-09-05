@@ -3,13 +3,18 @@ import "./style.css"
 import banner1 from "../../Assets/image/banner1.jpg"
 import banner2 from "../../Assets/image/banner2.jpg"
 import banner3 from "../../Assets/image/banner3.png"
+import banner4 from "../../Assets/image/banner4.png"
+import banner5 from "../../Assets/image/banner5.png"
+import banner6 from "../../Assets/image/banner6.png"
+import banner7 from "../../Assets/image/banner7.png"
 import flashSale from "../../Assets/image/flashsale.png"
 import ap3 from "../../Assets/image/airpod3.jpg"
 import ap4 from "../../Assets/image/airpods_pro.jpeg"
 import ip13 from "../../Assets/image/iphone-13.jpeg"
 import ip11pr from "../../Assets/image/iphone-11prm.png"
 import CountdownTimer from '../../Component/CountDownTime'
-
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel'
 
 export default function BannerClient() {
     return (
@@ -83,11 +88,17 @@ export default function BannerClient() {
                     </div>
 
                     <div className='ads-banner'>
-                        <div><img className='banner-1' src={banner1}></img></div>
+                        <Carousel className='carousel' showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={2000}>
+                            <img className='banner-1' src={banner1}></img>
+                            <img className='banner-1' src={banner4}></img>
+                            <img className='banner-1' src={banner5}></img>
+                            <img className='banner-1' src={banner6}></img>
+                            <img className='banner-1' src={banner7}></img>
+                        </Carousel>
                         <div className='sub-banner' >
                             <img className='banner-2' src={banner2}></img>
                             <img className='banner-3' src={banner3}></img>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -96,9 +107,9 @@ export default function BannerClient() {
                 <div className='flash-sale-banner'>
                     <div className='flash-sale-title'>
                         <img src={flashSale}></img>
-                        
-                        <CountdownTimer/>
-                        
+
+                        <CountdownTimer />
+
                     </div>
 
                     <div className='flash-sale-list'>
@@ -106,16 +117,16 @@ export default function BannerClient() {
                             <img src={ap3}></img>
                             <div>
                                 <p className=''>Tai nghe Airpods 3 Rep 1562U-M</p>
-                                <p><span style={{textDecoration: "line-through", color:"#b4b5bb"}}>950.000 ₫</span> 490.000 ₫</p>
+                                <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>950.000 ₫</span> 490.000 ₫</p>
                             </div>
-                         </div>
+                        </div>
 
                         <div className='flash-sale-item'><span className='on-sale'>Giảm giá</span>
-                        
+
                             <img src={ap4}></img>
                             <div>
                                 <p className=''>Tai nghe Airpods 3 Rep 1562U-M</p>
-                                <p><span style={{textDecoration: "line-through", color:"#b4b5bb"}}>950.000 ₫</span> 490.000 ₫</p>
+                                <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>950.000 ₫</span> 490.000 ₫</p>
                             </div>
                         </div>
 
@@ -123,7 +134,7 @@ export default function BannerClient() {
                             <img src={ip13}></img>
                             <div>
                                 <p className=''>Iphone 13 Lock 128GB Bản Hàn</p>
-                                <p><span style={{textDecoration: "line-through", color:"#b4b5bb"}}>11.950.000 ₫</span> 9.990.000 ₫</p>
+                                <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>11.950.000 ₫</span> 9.990.000 ₫</p>
                             </div>
                         </div>
 
@@ -131,11 +142,11 @@ export default function BannerClient() {
                             <img src={ip11pr}></img>
                             <div>
                                 <p className=''>Iphone11 Pro Quốc tế 256GB Bản Mỹ   </p>
-                                <p><span style={{textDecoration: "line-through", color:"#b4b5bb"}}>8.950.000 ₫</span> 6.490.000 ₫</p>
+                                <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>8.950.000 ₫</span> 6.490.000 ₫</p>
                             </div>
                         </div>
-                        
-                        
+
+
                     </div>
 
                 </div>

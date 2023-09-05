@@ -32,16 +32,23 @@
     width: 80%;
 }
 
-.ads-banner .banner-1{
-    width: 100%;
+
+
+.carousel{
+    flex: 2;
     height: 393px;
     border-radius: 6px;
     position: relative;
     animation: fade-down 1.2s linear 1;
+    
+}
+
+.carousel img{
+    min-height: 400px;
 }
 
 .sub-banner{
-    width: 33.3333%;
+    flex: 1;
 }
 
 
@@ -306,5 +313,9 @@
 
     .ads-banner .banner-1{
         animation: fade-to-right 1.2s linear 1;
+    }
+
+    .carousel img{
+        min-height: 340px;
     }
   }
