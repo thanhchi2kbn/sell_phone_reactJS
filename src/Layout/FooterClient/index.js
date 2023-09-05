@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import  './style.css';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -15,8 +15,7 @@ import lg_vnp from "../../Assets/image/logo-vnpay.png";
 import nhattin from "../../Assets/image/nhattin.jpg";
 import vnpost from "../../Assets/image/vnpost.jpg";
 import bct from "../../Assets/image/logo-bct.png";
-
-export default function FooterClient() {
+function FooterClient() {
   return (
     <div className='footer'>
           <div className='footer-list'>
@@ -126,3 +125,5 @@ export default function FooterClient() {
     </div>
   )
 }
+
+export default memo(FooterClient)

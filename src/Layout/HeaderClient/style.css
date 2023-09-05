@@ -19,6 +19,11 @@
     gap: 10px
   }
 
+  .icon-header:hover{
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
   .icon-header span{
     font-size: 32px;
     font-weight: 700;

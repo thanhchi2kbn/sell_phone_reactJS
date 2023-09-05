@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { memo, useEffect, useMemo, useState } from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import AppleIcon from '@mui/icons-material/Apple';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
-export default function HeaderClient() {
+ function HeaderClient() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     
 
@@ -31,7 +31,7 @@ export default function HeaderClient() {
     return (
         <>
             <header>
-                <div className='icon-header'><img src='https://vti.com.vn/wp-content/uploads/2021/06/logo_vti_light.svg'></img><span>Mobile</span></div>
+                <div onClick={()=>navigate("/")}  className='icon-header'><img src='https://vti.com.vn/wp-content/uploads/2021/06/logo_vti_light.svg'></img><span>Mobile</span></div>
                 <div className='menu-header'>
                    
                     <ul className={`list-menu-header ${isMenuOpen ? 'open' : ''}`} id='list-menu-header'>
@@ -68,3 +68,4 @@ export default function HeaderClient() {
         </>
     )
 }
+export default memo(HeaderClient)

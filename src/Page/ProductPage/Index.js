@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ProductTable from '../../Component/ProductTable'
-import ProductApi, {PAGE_SIZE} from '../../Apis/ProductApi'
+import ProductApi from '../../Apis/ProductApi'
 import { Button, IconButton, InputBase, Paper } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
@@ -44,23 +44,6 @@ export default function ProductPage() {
   }, [pagingData.currentPage]);
 
   const handleSearch = async () => {
-    // try {
-    //   const searchTerm = ref.current.value.trim(); // Lấy và loại bỏ khoảng trắng của giá trị từ input search
-    //   if (!searchTerm) {
-    //     // Nếu giá trị search rỗng, fetch tất cả sản phẩm
-    //     await getPagingProduct();
-    //   } else {
-    //     // Nếu có giá trị search, gọi API để lấy danh sách sản phẩm tương ứng
-    //     const res = await ProductApi.getAllList(); // Lấy danh sách tất cả sản phẩm 
-    //     const filteredProducts = res.data.filter(product =>
-    //       product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    //     );
-    //     setListProduct(filteredProducts);
-    //     getPagingProduct(Math.ceil(filteredProducts.length / PAGE_SIZE) )
-    //   }
-    // } catch (error) {
-    //   console.error("Error searching products:", error);
-    // }
     if(ref.current.value?.trim() &&  pagingData.currentPage > 1){
     setPagingData({
       ...pagingData,
@@ -69,7 +52,7 @@ export default function ProductPage() {
     })
     }
     else {
-      getPagingProduct()
+      await getPagingProduct()
     }
   };
   
