@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosClient = axios.create({
-  baseURL: " http://13.236.148.42/api",
+  baseURL: "http://3.104.122.11/api",
   params: {
     
   }

@@ -40,7 +40,7 @@ Deploy Frontend
 - add: location / {
   try_files $uri $uri/ /index.html;
   }
-- grant permission to access folder code:   
+- grant permission to access folder code:   sudo chmod 755 /home/ec2-user
 - restart nginx: sudo service nginx restart
 - verify frontend
-  fix nè
+- fix nè
