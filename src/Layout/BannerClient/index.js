@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import "./style.css"
 import banner1 from "../../Assets/image/banner1.jpg"
@@ -106,7 +107,7 @@ export default function BannerClient() {
 
                 <div className='flash-sale-banner'>
                     <div className='flash-sale-title'>
-                        <img src={flashSale}></img>
+                        <img src={flashSale} alt='img'></img>
 
                         <CountdownTimer />
 
@@ -114,7 +115,7 @@ export default function BannerClient() {
 
                     <div className='flash-sale-list'>
                         <div className='flash-sale-item'><span className='on-sale'>Giảm giá</span>
-                            <img src={ap3}></img>
+                            <img src={ap3} alt='img'></img>
                             <div>
                                 <p className=''>Tai nghe Airpods 3 Rep 1562U-M</p>
                                 <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>950.000 ₫</span> 490.000 ₫</p>
@@ -123,7 +124,7 @@ export default function BannerClient() {
 
                         <div className='flash-sale-item'><span className='on-sale'>Giảm giá</span>
 
-                            <img src={ap4}></img>
+                            <img src={ap4} alt='img'></img>
                             <div>
                                 <p className=''>Tai nghe Airpods 3 Rep 1562U-M</p>
                                 <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>950.000 ₫</span> 490.000 ₫</p>
@@ -131,7 +132,7 @@ export default function BannerClient() {
                         </div>
 
                         <div className='flash-sale-item'><span className='on-sale'>Giảm giá</span>
-                            <img src={ip13}></img>
+                            <img src={ip13} alt='img'></img>
                             <div>
                                 <p className=''>Iphone 13 Lock 128GB Bản Hàn</p>
                                 <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>11.950.000 ₫</span> 9.990.000 ₫</p>
@@ -139,7 +140,7 @@ export default function BannerClient() {
                         </div>
 
                         <div className='flash-sale-item'><span className='on-sale'>Giảm giá</span>
-                            <img src={ip11pr}></img>
+                            <img src={ip11pr} alt='img'></img>
                             <div>
                                 <p className=''>Iphone11 Pro Quốc tế 128GB Bản Mỹ   </p>
                                 <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>8.950.000 ₫</span> 6.490.000 ₫</p>
