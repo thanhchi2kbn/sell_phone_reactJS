@@ -141,7 +141,7 @@ export default function BannerClient() {
                         <div className='flash-sale-item'><span className='on-sale'>Giảm giá</span>
                             <img src={ip11pr}></img>
                             <div>
-                                <p className=''>Iphone11 Pro Quốc tế 256GB Bản Mỹ   </p>
+                                <p className=''>Iphone11 Pro Quốc tế 128GB Bản Mỹ   </p>
                                 <p><span style={{ textDecoration: "line-through", color: "#b4b5bb" }}>8.950.000 ₫</span> 6.490.000 ₫</p>
                             </div>
                         </div>
