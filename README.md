@@ -43,3 +43,4 @@ Deploy Frontend
 - grant permission to access folder code:   
 - restart nginx: sudo service nginx restart
 - verify frontend
+  fix nè
