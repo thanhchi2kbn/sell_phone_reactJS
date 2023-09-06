@@ -3,7 +3,6 @@ import  './style.css';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import lg_atm from "../../Assets/image/logo-atm.png";
