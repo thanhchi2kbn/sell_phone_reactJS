@@ -89,15 +89,15 @@ export default function BannerClient() {
 
                     <div className='ads-banner'>
                         <Carousel className='carousel' showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={2000}>
-                            <img className='banner-1' src={banner1}></img>
-                            <img className='banner-1' src={banner4}></img>
-                            <img className='banner-1' src={banner5}></img>
-                            <img className='banner-1' src={banner6}></img>
-                            <img className='banner-1' src={banner7}></img>
+                            <img className='banner-1' src={banner1} alt='banner'></img>
+                            <img className='banner-1' src={banner4} alt='banner'></img>
+                            <img className='banner-1' src={banner5} alt='banner'></img>
+                            <img className='banner-1' src={banner6} alt='banner'></img>
+                            <img className='banner-1' src={banner7} alt='banner'></img>
                         </Carousel>
                         <div className='sub-banner' >
-                            <img className='banner-2' src={banner2}></img>
-                            <img className='banner-3' src={banner3}></img>
+                            <img className='banner-2' src={banner2} alt='banner'></img>
+                            <img className='banner-3' src={banner3} alt='banner'></img>
 
                         </div>
                     </div>
