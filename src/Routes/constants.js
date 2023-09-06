@@ -1,4 +1,4 @@
-import BrandingWatermarkIcon from '@mui/icons-material/BrandingWatermark';
+
 import InventoryIcon from '@mui/icons-material/Inventory';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 export const MENUS = [

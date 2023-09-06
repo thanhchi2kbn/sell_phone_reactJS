@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import ProductTableRow from '../ProductTableRow';
 import "./style.css"
-import { Pagination, Stack, TableSortLabel, Typography } from '@mui/material';
+import { Pagination, Stack, TableSortLabel } from '@mui/material';
 import ProductModalContext from '../../Contexts/ProductModalContext';
 
 export default function ProductTable({ data, reFetch }) {

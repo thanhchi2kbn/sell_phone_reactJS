@@ -45,7 +45,7 @@ export default function ProductTableRow({ row }) {
       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
     >
       <TableCell>{row.name}</TableCell>
-      <TableCell><img className='img-product' src={row.image}></img> </TableCell>
+      <TableCell><img  className='img-product' src={row.image} alt='img'></img> </TableCell>
       {/* Display all details */}
       <TableCell>
         <div>

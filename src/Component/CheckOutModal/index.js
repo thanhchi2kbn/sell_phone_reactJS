@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, colors } from '@mui/material';
+import { Button, Modal } from '@mui/material';
 import "./style.css"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 

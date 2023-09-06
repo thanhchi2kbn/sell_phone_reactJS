@@ -1,6 +1,5 @@
 import { Alert, Snackbar } from '@mui/material';
-import React, { useState } from 'react';
-import { store } from '../../Store';
+import React from 'react';
 import { hiedNotification } from '../../Store/Actions/NotificationActions';
 import { useDispatch, useSelector } from 'react-redux';
 import "./style.css"

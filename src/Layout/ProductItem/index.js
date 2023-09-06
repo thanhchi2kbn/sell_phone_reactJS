@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ip13 from '../../Assets/image/iphone-13.jpeg';
 import './style.css';
 
 export default function ProductItem({ item }) {

@@ -79,42 +79,42 @@ function FooterClient() {
               <p className='footer-item-title'>Hình Thức Thanh Toán</p>
               <ul className='list-payment'>
                 <li>
-                  <img src={lg_atm}></img>
+                  <img src={lg_atm} alt='img'></img>
                 </li>
 
                 <li>
-                  <img src={lg_mst}></img>
+                  <img src={lg_mst} alt='img'></img>
                 </li>
 
                 <li>
-                  <img src={lg_visa}></img>
+                  <img src={lg_visa} alt='img'></img>
                 </li>
 
                 <li>
-                  <img src={lg_jcb}></img>
+                  <img src={lg_jcb} alt='img'></img>
                 </li>
 
                 <li>
-                  <img src={lg_vnp}></img>
+                  <img src={lg_vnp} alt='img'></img>
                 </li>
 
                 <li>
-                  <img src={lg_ssp}></img>
+                  <img src={lg_ssp} alt='img'></img>
                 </li>
               </ul>
 
               <p className='footer-item-title'>Hình Thức Vận Chuyển</p>
               <ul className='list-payment'>
                 <li>
-                  <img src={nhattin}></img>
+                  <img src={nhattin} alt='img'></img>
                 </li>
 
                 <li>
-                  <img src={vnpost}></img>
+                  <img src={vnpost} alt='img'></img>
                 </li>
 
                 <li>
-                  <img src={bct}></img>
+                  <img src={bct} alt='img'></img>
                 </li>
               </ul>
             </div>

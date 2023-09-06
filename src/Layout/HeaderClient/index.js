@@ -1,4 +1,5 @@
-import React, { memo, useEffect, useMemo, useState } from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { memo, useEffect, useState } from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import AppleIcon from '@mui/icons-material/Apple';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -31,15 +32,18 @@ import MenuIcon from '@mui/icons-material/Menu';
     return (
         <>
             <header>
-                <div onClick={()=>navigate("/")}  className='icon-header'><img src='https://vti.com.vn/wp-content/uploads/2021/06/logo_vti_light.svg'></img><span>Mobile</span></div>
+                <div onClick={()=>navigate("/")}  className='icon-header'><img alt='img' src='https://vti.com.vn/wp-content/uploads/2021/06/logo_vti_light.svg'></img><span>Mobile</span></div>
                 <div className='menu-header'>
                    
                     <ul className={`list-menu-header ${isMenuOpen ? 'open' : ''}`} id='list-menu-header'>
+                    
+                        
                         <li><a href='#' onClick={()=>navigate("/")}><HomeIcon /><p>TRANG CHỦ</p></a></li>
                         <li><a href='#'><AppleIcon /><p>SẢN PHẨM</p></a></li>
                         <li><a href='#'><LocalShippingIcon /><p>BẢO HÀNH</p></a></li>
                         <li><a href='#'><LockOpenIcon /><p>UNLOCK IPHONE</p></a></li>
                         <li><a href='#'><ConstructionIcon /><p>SỬA CHỮA</p></a></li>
+                        
                     </ul>
                 </div>
                 <div className='action-header'>

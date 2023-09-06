@@ -5,13 +5,10 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import { InputAdornment } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import ProductApi from '../../Apis/ProductApi';
 import UserModalContext from '../../Contexts/UserModalContext';
 import UserApi from '../../Apis/UserApi';
-var defaultImg = "https://doingoai.bacgiang.gov.vn/sites/default/files/dang-cap-nhat_4_3.png"
 const validationSchema = yup.object({
     email: yup
         .string('Enter product email')
@@ -24,7 +21,7 @@ const validationSchema = yup.object({
 
 const UserModal = () => {
 
-    const { isOpenModal, setIsOpenModal, initDataModal, setInitDataModal, handleSearch }
+    const { isOpenModal, setIsOpenModal, initDataModal, handleSearch }
         = React.useContext(UserModalContext)
     // console.log(initDataModal)
     const formik = useFormik({

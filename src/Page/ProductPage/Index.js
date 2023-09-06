@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react'
 import ProductTable from '../../Component/ProductTable'
 import ProductApi from '../../Apis/ProductApi'

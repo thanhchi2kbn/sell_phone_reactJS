@@ -3,7 +3,6 @@ import "./style.css"
 import ProductItem from '../ProductItem'
 import ProductApi from '../../Apis/ProductApi'
 import CategoryClient from '../CategoryClient'
-import { CircularProgress } from '@mui/material'
 
 
 export default function BodyClient() {

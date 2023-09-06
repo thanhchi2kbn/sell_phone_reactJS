@@ -133,7 +133,7 @@ const ProductModal = () => {
                         helperText={formik.touched.name && formik.errors.name}
                     />
                     
-                    {imageB64? (<img src={imageB64}  style={{width:"100px",height:"100px"}}></img>):(
+                    {imageB64? (<img src={imageB64}  style={{width:"100px",height:"100px" }} alt='img'></img>):(
                     <Button variant='contained' component="label">
                         Upload File
                         <input type='file' hidden onChange={handleFile}/>
