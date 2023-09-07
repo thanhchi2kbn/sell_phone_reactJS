@@ -106,6 +106,7 @@
 
 .km p{
   margin-left: 24px;
+  margin-bottom: 2px;
 }
 
 .product-item-info{
@@ -120,7 +121,7 @@
 @media (max-width: 500px) {
     /* CSS dành cho màn hình nhỏ hơn 767px */
     .product-item {
-        max-width: 150px   !important;
+        max-width: 40vw   !important;
         margin: 0;
         min-height: 414px;
     }
@@ -134,6 +135,11 @@
     .old-price{
 
       margin-left: 0;
+    }
+
+    .product-item-rating{
+      display: flex;
+      flex-direction: column;
     }
   }
 
