@@ -92,7 +92,7 @@
   .km p::before{
     content: "KM";
     color: #fff;
-    position: absolute;
+    position: relative;
     background: #f7941e 0% 0% no-repeat padding-box;
     box-shadow: 0 4px 6px #00000029;
     font-size: 11px;
@@ -100,12 +100,12 @@
     padding: 2px 4px;
     border-radius: 3px;
     left: 0;
-    top: 2px;
+    top: -1px;
     line-height: 1.2;
+    margin-right: 8px;
 }
 
 .km p{
-  margin-left: 24px;
   margin-bottom: 2px;
 }
 
@@ -115,6 +115,45 @@
 }
 
 
+  /* Media queries cho tablet */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .product-item {
+      width: 33.333%  !important;
+      margin: 0;
+  }
+  }
+
+
+    /* Media queries cho mobile */
+    @media (max-width: 767px) {
+      .product-item {
+        width: 50%  !important;
+        flex: 0 0 auto;
+        margin: 0;
+        
+    }
+
+    
+    .old-price{
+      margin-left: 0;
+    }
+
+    .product-item-rating{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .kmp{
+      font-size: 15px;
+    }
+
+    .product-item-img{
+      width: 100%;
+      height: auto;
+   
+  }
+
+    }
   
 
 
@@ -123,29 +162,17 @@
     .product-item {
         max-width: 40vw   !important;
         margin: 0;
-        min-height: 414px;
+        min-height: 404px;
     }
 
-    .product-item-img{
-        width: 100%;
-        height: auto;
-     
-    }
+   
 
-    .old-price{
-
-      margin-left: 0;
-    }
-
-    .product-item-rating{
-      display: flex;
-      flex-direction: column;
-    }
   }
 
   @media (max-width: 373px) {
     /* CSS dành cho màn hình nhỏ hơn 767px */
     .product-item {
-        max-width: 125px   !important;
+        width: 40%   !important;
+        min-height: 404px;
     }
   }

@@ -42,7 +42,7 @@ export default function ProductItem({ item }) {
           <p className='product-item-price'>{formattedPrice} <span className='old-price'>{oldPrice}</span></p>
           <div className='km'>
             {/* <span>KM</span> */}
-            <p className='kmp'>Mừng Đại Lễ 2/9 - Giảm thêm 300.000đ khi...</p>
+            <p className='kmp'>Mừng Đại Lễ 2/9 - Giảm thêm 300.000đ...</p>
           </div>
 
           <div className='product-item-rating'>
