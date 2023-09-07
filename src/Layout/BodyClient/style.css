@@ -19,5 +19,6 @@
         gap: 10px;
         justify-content: start;
         align-items: start;
+        margin: 0 auto;
     }
   }

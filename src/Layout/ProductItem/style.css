@@ -136,3 +136,10 @@
       margin-left: 0;
     }
   }
+
+  @media (max-width: 373px) {
+    /* CSS dành cho màn hình nhỏ hơn 767px */
+    .product-item {
+        max-width: 125px   !important;
+    }
+  }

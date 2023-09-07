@@ -48,6 +48,6 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <CartPage />,
     },
-]);
+], {basename: '/'});
 
 export default router
