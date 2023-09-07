@@ -98,7 +98,7 @@ export default function CartPage() {
                                         <td className='text-red'>{formatPrice(product.productPrice)}</td>
                                         <td>
                                             <input
-                                                style={{ width: "30px", padding: "5px 2px" }}
+                                                style={{ width: "30px", padding: "5px 4px" }}
                                                 type="number"
                                                 value={quantities[product.productId] || 1}
                                                 onChange={(e) => handleQuantityChange(e, product.productId)}

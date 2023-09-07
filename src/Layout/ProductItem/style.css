@@ -3,13 +3,13 @@
     padding: 5px 10px;
     background: #fff;
     border-radius: 15px;
-    min-height: 360px;
+    min-height: 310px;
     box-shadow: rgb(60 64 67 / 10%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
     color: #5e5e5e;
 
 }
 
-.product-item:hover .product-item-info{
+.product-item:hover .product-item-title{
     color: red;
 }
 
@@ -28,10 +28,18 @@
     color: #5e5e5e;
 }
 
-.product-item-title, .product-item-price{
+.product-item-title{
     font-size: 15px;
     font-weight: 700;
-    
+    margin: 0;
+}
+
+
+.product-item-price{
+  font-size: 14px;
+  font-weight: 700;
+  color: #DB2525;
+  margin: 10px 0  0 0;
 }
 
 /*  */
@@ -41,7 +49,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
-    width: 200px;
+    max-width: 200px;
     text-align: center;
   }
   
@@ -55,6 +63,7 @@
   .product-item-stars {
     color: gold;
     font-size: 20px;
+    margin-right: 8px;
   }
   
   .product-item-discount {
@@ -71,6 +80,38 @@
     color: #fff;
   }
   
+  .old-price{
+    text-decoration: line-through;
+    color: rgb(180, 181, 187);
+    margin-left: 8px;
+  }
+
+  .km{
+    position: relative;
+  }
+  .km p::before{
+    content: "KM";
+    color: #fff;
+    position: absolute;
+    background: #f7941e 0% 0% no-repeat padding-box;
+    box-shadow: 0 4px 6px #00000029;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 4px;
+    border-radius: 3px;
+    left: 0;
+    top: 2px;
+    line-height: 1.2;
+}
+
+.km p{
+  margin-left: 24px;
+}
+
+.product-item-info{
+  position: relative;
+  top: -10px
+}
 
 
   
@@ -80,11 +121,18 @@
     /* CSS dành cho màn hình nhỏ hơn 767px */
     .product-item {
         max-width: 150px   !important;
+        margin: 0;
+        min-height: 414px;
     }
 
     .product-item-img{
         width: 100%;
         height: auto;
      
+    }
+
+    .old-price{
+
+      margin-left: 0;
     }
   }

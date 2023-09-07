@@ -240,3 +240,15 @@
       }
   }
   
+
+
+  /* Media queries cho tablet */
+  @media (max-width: 1023px) and (min-width: 768px) {
+
+  }
+  
+  /* Media queries cho điện thoại di động */
+  @media (max-width: 767px) {
+    
+  }
+  

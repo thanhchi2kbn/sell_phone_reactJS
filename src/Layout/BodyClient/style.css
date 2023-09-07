@@ -17,5 +17,7 @@
     /* CSS dành cho màn hình nhỏ hơn 767px */
     .product-list{
         gap: 10px;
+        justify-content: start;
+        align-items: start;
     }
   }

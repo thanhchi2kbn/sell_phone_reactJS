@@ -10,6 +10,11 @@ export default function ProductItem({ item }) {
     currency: 'VND',
   }).format(item.price);
 
+  const oldPrice = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  }).format(item.price + item.price * 0.2);
+
   const handleItemClick = () => {
     navigate(`/detail/${item.id}`); // Điều hướng đến trang chi tiết sản phẩm với ID
   };
@@ -25,20 +30,30 @@ export default function ProductItem({ item }) {
             onClick={handleItemClick} // Gọi hàm điều hướng khi bấm vào ảnh
             style={{ cursor: 'pointer' }} // Thêm CSS để con trỏ thành dấu nhấp nháy
           />
-          <div className='product-item-rating'>
-            {/* Đánh giá số sao */}
-            <span className='product-item-stars'>{item.id % 2 === 0 ? '★★★★★' : '★★★★☆'}</span>
-          </div>
-  
-            <span className='product-item-discount'>{item.id % 2 === 0 ? 'Giảm giá 20%' : 'Giảm giá 25%'}</span>
+
+
+          <span className='product-item-discount'>{item.id % 2 === 0 ? 'Giảm giá 20%' : 'Giảm giá 25%'}</span>
 
         </div>
         <div className='product-item-info'>
           <h4 className='product-item-title' onClick={handleItemClick}>
             {item.name}
           </h4>
-          <p className='product-item-price'>{formattedPrice}</p>
+          <p className='product-item-price'>{formattedPrice} <span className='old-price'>{oldPrice}</span></p>
+          <div className='km'>
+            {/* <span>KM</span> */}
+            <p className='kmp'>Mừng Đại Lễ 2/9 - Giảm thêm 300.000đ khi...</p>
+          </div>
+
+          <div className='product-item-rating'>
+            {/* Đánh giá số sao */}
+            <span className='product-item-stars'>{item.id % 2 === 0 ? '★★★★★' : '★★★★☆'}</span>
+            <span>(40 đánh giá)</span>
+          </div>
+
         </div>
+
+
       </div>
     </>
   );

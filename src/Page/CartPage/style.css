@@ -32,6 +32,7 @@
 .cart-item .cart-item-product{
     display: flex;
     align-items: center;
+    max-width: 190px;
 
 }
 
@@ -46,6 +47,10 @@
 .cart-item td{
     text-align: center;
     padding: 10px;
+}
+
+.cart-item{
+    max-width: 193px;   
 }
 
 .icon-del{
