@@ -15,9 +15,12 @@ import { addCard } from '../../Store/Actions/NotificationActions'
 import ToastMessage from '../../Component/ToastMessage'
 import HotLine from '../../Layout/HotLine'
 
+
 export default function ProductDetail() {
     const [product, setProduct] = useState(null);
     const dispatch = useDispatch()
+
+
 
     useEffect(() => {
         // Gọi API để lấy thông tin sản phẩm theo ID

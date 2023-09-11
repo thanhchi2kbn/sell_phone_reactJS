@@ -5,7 +5,6 @@ import AppleIcon from '@mui/icons-material/Apple';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LoginIcon from '@mui/icons-material/Login';
 import './style.css'
@@ -24,11 +23,11 @@ import MenuIcon from '@mui/icons-material/Menu';
     const navigate = useNavigate()
     const [cartItems, setCartItems] = useState([]);
 
+    const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
     useEffect(() => {
-        // Lấy số lượng sản phẩm từ localStorage
-        const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
         setCartItems(storedCartItems);
     }, []);
+
     return (
         <>
             <header>
@@ -47,7 +46,6 @@ import MenuIcon from '@mui/icons-material/Menu';
                     </ul>
                 </div>
                 <div className='action-header'>
-                    <div className='search-btn'><SearchIcon /></div>
                     <div className='shoping-card'>
                         <Button onClick={()=>navigate("/cart")} color="error" style={{ color: "#fff" }}>
                             <ShoppingCartIcon />

@@ -48,7 +48,7 @@ export function loginAction(email, password) {
   export function addCard(product) {
     return (dispatch) => {
         if (product) {
-            const productId = product.id; // Giả sử ID của sản phẩm nằm trong thuộc tính "id"
+            const productId = product.id; 
             const productImg = product.image;
             const productPrice = product.price;
             const productName = product.name;
