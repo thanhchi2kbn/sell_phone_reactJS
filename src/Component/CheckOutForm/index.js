@@ -7,7 +7,9 @@ import "./style.css"
 const validationSchema = Yup.object().shape({
     fullName: Yup.string().required('Họ và tên không được để trống'),
     address: Yup.string().required('Địa chỉ không được để trống'),
-    phoneNumber: Yup.string().required('Số điện thoại không được để trống'),
+    phoneNumber: Yup.string()
+    .matches(/^[0-9]*$/, 'Số điện thoại không được chứa ký tự')
+    .required('Số điện thoại không được để trống'),
     // Thêm các quy tắc xác thực khác nếu cần
 });
 

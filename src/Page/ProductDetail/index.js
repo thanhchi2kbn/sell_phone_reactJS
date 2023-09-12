@@ -52,7 +52,6 @@ export default function ProductDetail() {
 
     const handleBuyClick = () => {
         if (product) {
-            console.log(product);
             dispatch(addCard(product)); // Gọi hàm addCard và truyền thông tin sản phẩm
         }
     };
