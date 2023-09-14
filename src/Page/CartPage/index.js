@@ -27,6 +27,7 @@ export default function CartPage() {
 
     useEffect(() => {
         setProducts(storedCartItems);
+        window.scrollTo(0,0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
