@@ -5,8 +5,8 @@ import "./style.css"
 
 export default function CategoryClient() {
   return (
-    <div className='category'>
-        <div className='icon-category'>
+    <div  className='category'>
+        <div id='product' className='icon-category'>
             <h3><PhoneIphoneIcon/></h3>
             <h4>IPHONE </h4>
         </div>

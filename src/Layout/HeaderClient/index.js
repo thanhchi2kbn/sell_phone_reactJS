@@ -38,7 +38,7 @@ import MenuIcon from '@mui/icons-material/Menu';
                     
                         
                         <li><a href='#' onClick={()=>navigate("/")}><HomeIcon /><p>TRANG CHỦ</p></a></li>
-                        <li><a href='#'><AppleIcon /><p>SẢN PHẨM</p></a></li>
+                        <li><a href='#product' onClick={()=>navigate("/#product")}><AppleIcon /><p>SẢN PHẨM</p></a></li>
                         <li><a href='#'><LocalShippingIcon /><p>BẢO HÀNH</p></a></li>
                         <li><a href='#'><LockOpenIcon /><p>UNLOCK IPHONE</p></a></li>
                         <li><a href='#'><ConstructionIcon /><p>SỬA CHỮA</p></a></li>
