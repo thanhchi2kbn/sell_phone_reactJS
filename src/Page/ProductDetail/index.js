@@ -6,7 +6,7 @@ import HeaderClient from '../../Layout/HeaderClient'
 import FooterClient from '../../Layout/FooterClient'
 import RadioBtn from '../../Layout/RadioBtn'
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import { Button } from '@mui/material'
+import { Button, CircularProgress } from '@mui/material'
 import ProductApi from '../../Apis/ProductApi'
 import EastIcon from '@mui/icons-material/East';
 import HomeIcon from '@mui/icons-material/Home';
@@ -133,7 +133,7 @@ export default function ProductDetail() {
                                 </div>
                             </>
                         ) : (
-                            <p>Loading...</p>
+                            <CircularProgress  style={{marginTop: "30px"}} color="success" />
                         )}
                     </div>
 

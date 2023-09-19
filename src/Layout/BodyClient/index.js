@@ -23,8 +23,7 @@ export default function BodyClient() {
   return (
     <>
       <CategoryClient/>
-      <div  className='product-list'>
-        
+      <div  className='product-list'> 
         {listProduct.map((item)=>(<ProductItem key={item.id} item={item}/>))}
 
       </div>
