@@ -38,7 +38,9 @@ export default function ProductTableRow({ row }) {
   // Destructuring to access details properties
   const { brand, operatingSystem, camera, display, memory, color } = row.details;
 
-
+  function formatPrice(price) {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
+}
   return (
     <TableRow
       key={row.name}
@@ -57,7 +59,7 @@ export default function ProductTableRow({ row }) {
           <strong>Color:</strong> {color}
         </div>
       </TableCell>
-      <TableCell>{row.price}</TableCell>
+      <TableCell>{formatPrice(row.price)}</TableCell>
       <TableCell align="right">
         <IconButton onClick={handleEditProduct}>
           <EditIcon />
